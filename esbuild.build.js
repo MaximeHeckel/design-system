@@ -1,28 +1,31 @@
-const esbuild = require("esbuild");
-const packagejson = require("./package.json");
-// const { globPlugin } = require("esbuild-plugin-glob");
+const esbuild = require('esbuild');
+const packagejson = require('./package.json');
+const { globPlugin } = require('esbuild-plugin-glob');
 
 const sharedConfig = {
   loader: {
-    ".tsx": "tsx",
-    ".ts": "tsx",
+    '.tsx': 'tsx',
+    '.ts': 'tsx',
   },
-  outbase: "./src",
+  outbase: './src',
   bundle: true,
   minify: true,
-  inject: ["./react-shim.js"],
-  target: ["esnext"],
-  logLevel: "debug",
+  jsxFactory: 'createElement',
+  jsxFragment: 'Fragment',
+  target: ['esnext'],
+  logLevel: 'debug',
   external: [...Object.keys(packagejson.peerDependencies || {})],
 };
 
 esbuild
   .build({
     ...sharedConfig,
-    entryPoints: ["src/index.ts"],
-    outdir: "dist/cjs",
-    platform: "node",
-    format: "cjs",
+    entryPoints: ['src/index.ts'],
+    outdir: 'dist/cjs',
+    format: 'cjs',
+    banner: {
+      js: "const { createElement, Fragment } = require('react');\n",
+    },
   })
   .catch(() => process.exit(1));
 
@@ -30,14 +33,16 @@ esbuild
   .build({
     ...sharedConfig,
     entryPoints: [
-      "src/index.ts",
-      "src/components/Button/index.tsx",
-      "src/components/Test/index.tsx",
-      "src/components/Flex/index.tsx",
-      "src/lib/stitches.config.ts",
+      'src/index.ts',
+      'src/components/**/index.tsx',
+      'src/lib/stitches.config.ts',
     ],
-    outdir: "dist/esm",
+    outdir: 'dist/esm',
     splitting: true,
-    format: "esm",
+    format: 'esm',
+    banner: {
+      js: "import { createElement, Fragment } from 'react';\n",
+    },
+    plugins: [globPlugin()],
   })
   .catch(() => process.exit(1));
