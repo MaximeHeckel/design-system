@@ -1,14 +1,14 @@
-import React from "react";
-import Flex from "../Flex";
-import { StyledButton, StyledIconButton } from "./Styles";
-import { ButtonProps } from "./types";
+import React from 'react';
+import Flex from '../Flex';
+import { StyledButton, StyledIconButton } from './Button.styles';
+import { ButtonProps } from './types';
 
 const Button = <T extends object>(
   props: ButtonProps<T>,
   ref: React.ForwardedRef<HTMLButtonElement>
 ) => {
   const {
-    variant = "primary",
+    variant = 'primary',
     children,
     icon,
     startIcon,
@@ -17,7 +17,7 @@ const Button = <T extends object>(
     ...rest
   } = props;
 
-  if (variant === "icon") {
+  if (variant === 'icon') {
     return (
       <StyledIconButton variant={variant} as={Component} ref={ref} {...rest}>
         <Flex
@@ -36,7 +36,7 @@ const Button = <T extends object>(
       {startIcon ? (
         <Flex
           css={{
-            marginRight: "var(--space-2)",
+            marginRight: 'var(--space-2)',
           }}
         >
           {startIcon}
@@ -46,7 +46,7 @@ const Button = <T extends object>(
       {endIcon ? (
         <Flex
           css={{
-            marginLeft: "var(--space-2)",
+            marginLeft: 'var(--space-2)',
           }}
         >
           {endIcon}
@@ -55,7 +55,7 @@ const Button = <T extends object>(
     </StyledButton>
   );
 };
-Button.displayName = "Button";
+Button.displayName = 'Button';
 
 const ForwardedButton = React.forwardRef(Button);
 

@@ -1,11 +1,11 @@
-import { ForwardRefComponent, HTMLMotionProps } from "framer-motion";
+import { ForwardRefComponent, HTMLMotionProps } from 'framer-motion';
 
-export type MainButtonVariant = "primary" | "secondary";
-export type IconButtonVariant = "icon";
+export type MainButtonVariant = 'primary' | 'secondary';
+export type IconButtonVariant = 'icon';
 
 interface BaseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-  as?: ForwardRefComponent<HTMLButtonElement, HTMLMotionProps<"button">>;
-  type?: "button" | "reset" | "submit";
+  as?: ForwardRefComponent<HTMLButtonElement, HTMLMotionProps<'button'>>;
+  type?: 'button' | 'reset' | 'submit';
 }
 
 interface MainButtonProps extends BaseButtonProps {

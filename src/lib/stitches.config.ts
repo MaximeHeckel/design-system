@@ -1,7 +1,7 @@
-import { createStitches, CSS as StitchesCSS } from "@stitches/react";
+import { createStitches, CSS as StitchesCSS } from '@stitches/react';
 
 export const Shadows = {
-  0: "none",
+  0: 'none',
   1: `
       0.5px 1px 1px hsl(var(--shadow-color) / 0.333)
     `,
@@ -22,5 +22,5 @@ export const Shadows = {
 const { config, css, getCssText, keyframes, styled, theme } = createStitches();
 
 export type CSS = StitchesCSS<typeof config>;
-export type { VariantProps } from "@stitches/react";
+export type { VariantProps } from '@stitches/react';
 export { config, css, getCssText, keyframes, styled, theme };
