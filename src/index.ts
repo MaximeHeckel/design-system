@@ -13,6 +13,7 @@ export {
   H4,
 } from './components/Typography';
 export {
+  Shadows,
   styled,
   css,
   keyframes,
@@ -20,4 +21,4 @@ export {
   theme,
   config,
 } from './lib/stitches.config';
-export type { CSS } from './lib/stitches.config';
+export type { CSS, VariantProps } from './lib/stitches.config';
