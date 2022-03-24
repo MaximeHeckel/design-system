@@ -36,6 +36,7 @@ esbuild
       'src/index.ts',
       'src/components/**/index.tsx',
       'src/lib/stitches.config.ts',
+      'src/lib/globalStyles.ts',
     ],
     outdir: 'dist/esm',
     splitting: true,

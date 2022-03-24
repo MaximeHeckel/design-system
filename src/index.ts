@@ -21,4 +21,5 @@ export {
   theme,
   config,
 } from './lib/stitches.config';
+export { globalStyles } from './lib/globalStyles';
 export type { CSS, VariantProps } from './lib/stitches.config';

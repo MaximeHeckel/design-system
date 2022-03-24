@@ -19,8 +19,9 @@ export const Shadows = {
     `,
 };
 
-const { config, css, getCssText, keyframes, styled, theme } = createStitches();
+const { config, css, getCssText, globalCss, keyframes, styled, theme } =
+  createStitches();
 
 export type CSS = StitchesCSS<typeof config>;
 export type { VariantProps } from '@stitches/react';
-export { config, css, getCssText, keyframes, styled, theme };
+export { config, css, getCssText, globalCss, keyframes, styled, theme };
