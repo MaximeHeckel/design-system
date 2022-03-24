@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
   },
   extends: [
-    'react-hooks',
+    'plugin:react-hooks/recommended',
     'plugin:react/recommended',
     'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
@@ -30,7 +30,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'latest',
+      version: '17.0.1',
     },
   },
 };

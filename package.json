@@ -11,11 +11,14 @@
     "build": "node ./esbuild.build.js",
     "clean": "rimraf dist",
     "dev": "yarn clean && node ./esbuild.dev.js & yarn ts-types --watch",
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
+    "lint": "eslint --ext=ts,tsx .",
     "postbuild": "yarn ts-types",
     "prebuild": "yarn clean",
     "prepack": "yarn build",
     "test": "jest",
-    "ts-types": "tsc --emitDeclarationOnly --outDir dist"
+    "ts-types": "tsc --emitDeclarationOnly --outDir dist",
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.2",
