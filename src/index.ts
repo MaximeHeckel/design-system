@@ -12,6 +12,7 @@ export {
   H3,
   H4,
 } from './components/Typography';
+export { default as VisuallyHidden } from './components/VisuallyHidden';
 export {
   Shadows,
   styled,
