@@ -14,7 +14,7 @@
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
     "lint": "eslint --ext=ts,tsx .",
     "postbuild": "yarn ts-types",
-    "postversion": "git tag web/v$npm_package_version && git push origin web/v$npm_package_version",
+    "postversion": "git tag v$npm_package_version && git push origin v$npm_package_version",
     "prebuild": "yarn clean",
     "prepack": "yarn build",
     "test": "jest",
