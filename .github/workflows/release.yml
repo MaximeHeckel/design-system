@@ -60,7 +60,7 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
       - name: Bump version
-        run: yarn version --${{ github.event.inputs.version }}
+        run: npm version ${{ github.event.inputs.version }}
       - name: Get package.json version
         uses: actions/github-script@v5
         id: get-version
