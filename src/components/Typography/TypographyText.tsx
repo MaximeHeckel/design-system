@@ -20,11 +20,17 @@ const Text = styled('span', {
   textRendering: 'optimizeLegibility',
 
   variants: {
-    // add truncate variant
     // line heights / leading (define token)
     // rename space to tracking (define token)
     // composed variant => gradient = true => variant = default ?
     // Follow dynamic metrics https://rsms.me/inter/dynmetrics/
+    outline: {
+      true: {
+        color: 'transparent !important',
+        WebkitTextStrokeColor: 'var(--maximeheckel-colors-typeface-primary)',
+        WebkitTextStrokeWidth: '1px',
+      },
+    },
     spaced: {
       true: {
         letterSpacing: '0.3px',
@@ -66,6 +72,13 @@ const Text = styled('span', {
       },
       7: {
         fontSize: 'var(--font-size-7)',
+      },
+    },
+    truncate: {
+      true: {
+        overflow: 'hidden',
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
       },
     },
     variant: {
