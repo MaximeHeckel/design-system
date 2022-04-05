@@ -7,7 +7,7 @@ import {
   HeadingSizeVariants,
   ShortHandHeadingProps,
   TextSizeVariants,
-} from './types';
+} from './Typography.types';
 
 const Heading = React.forwardRef<
   React.ElementRef<typeof DEFAULT_TAG>,
