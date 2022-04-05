@@ -1,4 +1,4 @@
-import { ArrowPosition } from './types';
+import { ArrowPosition } from './Anchor.types';
 
 /**
  * Base 64 equivalent of the ArrowIcon, TwitterIcon and GithubIcon with width and height set to "var(--size, 1.05em)"
