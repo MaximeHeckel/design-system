@@ -1,4 +1,6 @@
 import { globalCss } from './stitches.config';
+import darkTheme from './themes/dark';
+import lightTheme from './themes/light';
 import { palette } from './tokens/colors';
 import { grid } from './tokens/layout';
 import { radii } from './tokens/radii';
@@ -15,4 +17,6 @@ export const globalStyles = globalCss({
     ...fontWeights,
     ...grid,
   },
+  ...lightTheme,
+  ...darkTheme,
 });
