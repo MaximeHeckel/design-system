@@ -13,7 +13,7 @@ on:
           - major
 
 env:
-  GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
+  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 jobs:
   install-cache:
@@ -24,6 +24,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
+          always-auth: true
           node-version: '16.x'
       - name: Cache NPM dependencies
         uses: actions/cache@v2
@@ -46,6 +47,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node }}
         uses: actions/setup-node@v1
         with:
+          always-auth: true
           node-version: '16.x'
       - name: Restore NPM dependencies
         uses: actions/cache@v2
@@ -78,4 +80,4 @@ jobs:
           commit-message: Bump package.json to version ${{steps.get-version.outputs.result}}
       - name: Publish
         run: |
-          yarn publish
+          yarn publish --access public
