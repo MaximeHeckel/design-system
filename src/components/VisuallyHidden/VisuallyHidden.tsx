@@ -1,6 +1,11 @@
-import { css } from 'src/lib/stitches.config';
 import React from 'react';
-import { VisuallyHiddenProps } from './VisuallyHidden.types';
+import { css } from 'src/lib/stitches.config';
+
+interface Props {
+  as: React.ElementType;
+  children?: React.ReactNode;
+  id?: string;
+}
 
 const visuallyHiddenClass = css({
   border: '0 !important',
@@ -15,10 +20,10 @@ const visuallyHiddenClass = css({
   whiteSpace: 'nowrap !important',
 });
 
-const VisuallyHidden = ({ as: Component, ...props }: VisuallyHiddenProps) => (
+const VisuallyHidden = ({ as: Component, ...props }: Props) => (
   <Component {...props} className={visuallyHiddenClass()}>
     {props.children}
   </Component>
 );
 
-export { VisuallyHidden };
+export default VisuallyHidden;
