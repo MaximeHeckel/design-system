@@ -1,3 +1,7 @@
+/**
+ * This is a Test component to verify tree shaking works on consumer project
+ */
+
 const Test = () => {
   return (
     <>

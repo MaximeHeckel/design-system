@@ -1,5 +1,6 @@
 /** COMPONENTS **/
 export { default as Anchor } from './components/Anchor';
+export { default as Blockquote } from './components/Blockquote';
 export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Callout } from './components/Callout';
@@ -7,6 +8,7 @@ export { default as Card } from './components/Card';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon } from './components/Icon';
+export { default as List } from './components/List';
 export { default as Pill } from './components/Pill';
 export { default as Test } from './components/Test';
 export {
