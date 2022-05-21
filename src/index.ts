@@ -1,10 +1,13 @@
+/** COMPONENTS **/
 export { default as Anchor } from './components/Anchor';
 export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
+export { default as Callout } from './components/Callout';
 export { default as Card } from './components/Card';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon } from './components/Icon';
+export { default as Pill } from './components/Pill';
 export { default as Test } from './components/Test';
 export {
   default as Text,
@@ -18,6 +21,11 @@ export {
 } from './components/Typography';
 export { default as VisuallyHidden } from './components/VisuallyHidden';
 
+/** HOOKS **/
+export { default as useKeyboardShortcut } from './hooks/useKeyboardShortcut';
+export { default as useTheme, ThemeProvider } from './hooks/useTheme';
+
+/** LIB **/
 export {
   Shadows,
   styled,
