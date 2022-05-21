@@ -23,7 +23,11 @@ export { default as VisuallyHidden } from './components/VisuallyHidden';
 
 /** HOOKS **/
 export { default as useKeyboardShortcut } from './hooks/useKeyboardShortcut';
-export { default as useTheme, ThemeProvider } from './hooks/useTheme';
+export {
+  default as useTheme,
+  ThemeContext,
+  ThemeProvider,
+} from './hooks/useTheme';
 
 /** LIB **/
 export {
