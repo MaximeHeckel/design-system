@@ -5,12 +5,19 @@ export { default as Box } from './components/Box';
 export { default as Button } from './components/Button';
 export { default as Callout } from './components/Callout';
 export { default as Card } from './components/Card';
+export { default as Checkbox } from './components/Checkbox';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon } from './components/Icon';
+export { default as Label } from './components/Label';
 export { default as List } from './components/List';
 export { default as Pill } from './components/Pill';
+export { default as Radio } from './components/Radio';
+export { default as Range } from './components/Range';
+export { default as Switch } from './components/Switch';
 export { default as Test } from './components/Test';
+export { default as TextArea } from './components/TextArea';
+export { default as TextInput } from './components/TextInput';
 export {
   default as Text,
   EM,
@@ -24,6 +31,7 @@ export {
 export { default as VisuallyHidden } from './components/VisuallyHidden';
 
 /** HOOKS **/
+export { default as useDebouncedValue } from './hooks/useDebouncedValue';
 export { default as useKeyboardShortcut } from './hooks/useKeyboardShortcut';
 export {
   default as useTheme,
