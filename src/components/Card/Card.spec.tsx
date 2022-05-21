@@ -1,11 +1,5 @@
-// import preloadAll from 'jest-next-dynamic';
 import { render } from '@testing-library/react';
-import React from 'react';
 import Card from '.';
-
-// beforeAll(async () => {
-//   await preloadAll();
-// });
 
 describe('Card', () => {
   it('renders a Card', () => {
