@@ -9,6 +9,7 @@ export { default as Checkbox } from './components/Checkbox';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon } from './components/Icon';
+export { default as InlineCode } from './components/InlineCode';
 export { default as Label } from './components/Label';
 export { default as List } from './components/List';
 export { default as Pill } from './components/Pill';
