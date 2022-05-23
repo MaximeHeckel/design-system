@@ -1,69 +1,65 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import Flex from '../Flex';
 import { StyledButton, StyledIconButton } from './Button.styles';
 import { ButtonProps } from './Button.types';
 
-const Button = <T extends object>(
-  props: ButtonProps<T>,
-  ref: React.ForwardedRef<HTMLButtonElement>
-) => {
-  const {
-    variant = 'primary',
-    children,
-    icon,
-    startIcon,
-    endIcon,
-    as: Component,
-    ...rest
-  } = props;
+const Button = React.forwardRef(
+  <T extends object>(
+    props: ButtonProps<T>,
+    ref: React.ForwardedRef<HTMLButtonElement>
+  ) => {
+    const {
+      variant = 'primary',
+      children,
+      icon,
+      startIcon,
+      endIcon,
+      as: Component,
+      ...rest
+    } = props;
 
-  if (variant === 'icon') {
+    if (variant === 'icon') {
+      return (
+        <StyledIconButton variant={variant} as={Component} ref={ref} {...rest}>
+          <Flex
+            css={{
+              zIndex: 1,
+            }}
+          >
+            {icon}
+          </Flex>
+        </StyledIconButton>
+      );
+    }
+
     return (
-      <StyledIconButton variant={variant} as={Component} ref={ref} {...rest}>
-        <Flex
-          css={{
-            zIndex: 1,
-          }}
-        >
-          {icon}
-        </Flex>
-      </StyledIconButton>
+      <StyledButton variant={variant} as={Component} ref={ref} {...rest}>
+        {startIcon ? (
+          <Flex
+            css={{
+              marginRight: 'var(--space-2)',
+            }}
+          >
+            {startIcon}
+          </Flex>
+        ) : null}
+        {children}
+        {endIcon ? (
+          <Flex
+            css={{
+              marginLeft: 'var(--space-2)',
+            }}
+          >
+            {endIcon}
+          </Flex>
+        ) : null}
+      </StyledButton>
     );
   }
-
-  return (
-    <StyledButton variant={variant} as={Component} ref={ref} {...rest}>
-      {startIcon ? (
-        <Flex
-          css={{
-            marginRight: 'var(--space-2)',
-          }}
-        >
-          {startIcon}
-        </Flex>
-      ) : null}
-      {children}
-      {endIcon ? (
-        <Flex
-          css={{
-            marginLeft: 'var(--space-2)',
-          }}
-        >
-          {endIcon}
-        </Flex>
-      ) : null}
-    </StyledButton>
-  );
-};
+);
 Button.displayName = 'Button';
 
-const ForwardedButton = React.forwardRef(Button);
-
-export const WrappedButton = <T,>({
-  ref,
-  ...rest
-}: ButtonProps<T> & { ref?: React.Ref<HTMLButtonElement> }) => (
-  <ForwardedButton {...rest} ref={ref} />
-);
-
-export default WrappedButton;
+export default Button as <T extends object>(
+  props: ButtonProps<T> & { ref?: React.ForwardedRef<HTMLButtonElement> }
+) => JSX.Element;
