@@ -4,7 +4,7 @@ export const StyledCalloutIconWrapper = styled('div', {
   position: 'absolute',
   display: 'flex',
   top: '-24px',
-  right: '-18px',
+  right: '-16px',
   borderRadius: '50%',
   padding: '8px',
   color: 'var(--maximeheckel-colors-body)',
