@@ -4,11 +4,9 @@ export const StyledBlockquote = styled('blockquote', {
   /**
    * Make it fullbleed!
    */
-  margin: '0 -50vw 2.25rem -50vw',
-  position: 'relative',
-  left: '50%',
-  right: '50%',
   width: '100vw',
+  marginLeft: 'calc(50% - 50vw)',
+  marginBottom: '2.25rem',
 
   paddingTop: '40px',
   paddingBottom: '40px',
