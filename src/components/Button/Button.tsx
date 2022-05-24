@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React from 'react';
 import Flex from '../Flex';
 import { StyledButton, StyledIconButton } from './Button.styles';
@@ -15,13 +14,12 @@ const Button = React.forwardRef(
       icon,
       startIcon,
       endIcon,
-      as: Component,
       ...rest
     } = props;
 
     if (variant === 'icon') {
       return (
-        <StyledIconButton variant={variant} as={Component} ref={ref} {...rest}>
+        <StyledIconButton variant={variant} ref={ref} {...rest}>
           <Flex
             css={{
               zIndex: 1,
@@ -34,7 +32,7 @@ const Button = React.forwardRef(
     }
 
     return (
-      <StyledButton variant={variant} as={Component} ref={ref} {...rest}>
+      <StyledButton variant={variant} ref={ref} {...rest}>
         {startIcon ? (
           <Flex
             css={{
