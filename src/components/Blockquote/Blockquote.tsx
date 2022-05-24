@@ -1,13 +1,13 @@
 import React from 'react';
-import { StyledBlockquote } from './Blockquote.styles';
+import { BlockquoteContent, BlockquoteWrapper } from './Blockquote.styles';
 
 const Blockquote: React.FC = (props) => {
   const { children, ...rest } = props;
 
   return (
-    <StyledBlockquote {...rest}>
-      <div>{children}</div>
-    </StyledBlockquote>
+    <BlockquoteWrapper {...rest}>
+      <BlockquoteContent>{children}</BlockquoteContent>
+    </BlockquoteWrapper>
   );
 };
 

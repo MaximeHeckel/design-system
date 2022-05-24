@@ -1,6 +1,7 @@
 import { styled } from 'src/lib/stitches.config';
+import Box from '../Box';
 
-export const StyledBlockquote = styled('blockquote', {
+export const BlockquoteWrapper = styled('blockquote', {
   /**
    * Make it fullbleed!
    */
@@ -12,6 +13,15 @@ export const StyledBlockquote = styled('blockquote', {
   paddingBottom: '40px',
   background: 'var(--maximeheckel-colors-emphasis)',
   backdropFilter: 'blur(6px)',
+});
+
+export const BlockquoteContent = styled(Box, {
+  maxWidth: '1020px',
+  padding: '0 var(--space-2)',
+  textAlign: 'center',
+  width: '100%',
+  margin: '0 auto',
+  color: 'var(--maximeheckel-colors-typeface-primary)',
 
   p: {
     marginBottom: 0,
@@ -19,13 +29,5 @@ export const StyledBlockquote = styled('blockquote', {
     lineHeight: '1.6818 !important',
     fontWeight: 'var(--font-weight-2) !important',
     fontStyle: 'italic',
-  },
-
-  div: {
-    maxWidth: '880px !important',
-    padding: '0 20px',
-    width: '100%',
-    margin: '0 auto',
-    color: 'var(--maximeheckel-colors-typeface-primary)',
   },
 });
