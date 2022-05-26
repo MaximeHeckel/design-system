@@ -38,6 +38,7 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
 
       document.body.classList.remove('maximeheckel-' + prevState);
       document.body.classList.add('maximeheckel-' + nextState);
+      document.documentElement.style.setProperty('color-scheme', nextState);
       storage.set(nextState);
 
       return nextState;
