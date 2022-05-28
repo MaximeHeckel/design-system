@@ -1,4 +1,5 @@
 export const fonts = {
+  '-webkit-font-smoothing': 'antialiased',
   '--font-fallback':
     "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
   '--font-display': "'Inter', var(--font-fallback)",
