@@ -126,31 +126,26 @@ const Text = styled('span', {
 // http://www.meticulous.org.uk/meticulous/websolutions/coding_tests/fractions.html
 // EXPLORE: Footnote component: http://microformats.org/wiki/footnotes-examples https://2ality.com/2011/12/footnotes.html
 
-const EM = React.forwardRef<React.ElementRef<'em'>, EMProps>((props, ref) => {
+const EM = (props: EMProps) => {
   return (
     <Text
       {...props}
       as="em"
       variant="tertiary"
       weight="3"
-      ref={ref}
       spaced={false}
       style={{
         letterSpacing: '-0.3px',
       }}
     />
   );
-});
+};
 
 EM.displayName = 'EM';
 
-const Strong = React.forwardRef<React.ElementRef<'strong'>, StrongProps>(
-  (props, ref) => {
-    return (
-      <Text {...props} as="strong" variant="primary" weight="4" ref={ref} />
-    );
-  }
-);
+const Strong = (props: StrongProps) => {
+  return <Text {...props} as="strong" variant="primary" weight="4" />;
+};
 
 Strong.displayName = 'Strong';
 
