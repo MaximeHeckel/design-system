@@ -19,7 +19,7 @@ export { default as Switch } from './components/Switch';
 export { default as Test } from './components/Test';
 export { default as TextArea } from './components/TextArea';
 export { default as TextInput } from './components/TextInput';
-export { default as Tooltip } from './components/Tooltip';
+export { default as Tooltip, TooltipProvider } from './components/Tooltip';
 export {
   default as Text,
   EM,

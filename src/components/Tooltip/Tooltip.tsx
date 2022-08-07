@@ -23,17 +23,23 @@ const Tooltip = (props: TooltipProps) => {
   return (
     <TooltipPrimitive.Root delayDuration={delayDuration}>
       <TooltipPrimitive.Trigger asChild>{children}</TooltipPrimitive.Trigger>
-      <TooltipContent
-        id={id}
-        portalled={portalled}
-        side={side}
-        sideOffset={sideOffset}
-      >
-        {content}
-        {visuallyHiddenText ? (
-          <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
-        ) : null}
-      </TooltipContent>
+      {portalled ? (
+        <TooltipPrimitive.Portal>
+          <TooltipContent id={id} side={side} sideOffset={sideOffset}>
+            {content}
+            {visuallyHiddenText ? (
+              <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
+            ) : null}
+          </TooltipContent>
+        </TooltipPrimitive.Portal>
+      ) : (
+        <TooltipContent id={id} side={side} sideOffset={sideOffset}>
+          {content}
+          {visuallyHiddenText ? (
+            <VisuallyHidden>{visuallyHiddenText}</VisuallyHidden>
+          ) : null}
+        </TooltipContent>
+      )}
     </TooltipPrimitive.Root>
   );
 };
