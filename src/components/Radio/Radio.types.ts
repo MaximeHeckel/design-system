@@ -13,6 +13,7 @@ export type RadioGroupProps = RadioContextType &
   RadioGroupOptions & {
     id?: string;
     ['data-testid']?: string;
+    children: React.ReactNode;
   };
 
 export interface RadioItemProps

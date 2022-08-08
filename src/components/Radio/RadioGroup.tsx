@@ -4,7 +4,7 @@ import { RadioContext } from './RadioContext';
 import { RadioGroupProps } from './Radio.types';
 import { isRadioItemElement } from './utils';
 
-const RadioGroup: React.FC<RadioGroupProps> = (props) => {
+const RadioGroup = (props: RadioGroupProps) => {
   const { children, direction = 'vertical', name, onChange } = props;
 
   const filteredChildren = React.Children.toArray(children).filter((child) =>
