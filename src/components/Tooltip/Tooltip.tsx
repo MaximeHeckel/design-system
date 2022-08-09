@@ -44,4 +44,7 @@ const Tooltip = (props: TooltipProps) => {
   );
 };
 
+Tooltip.displayName = 'Tooltip';
+Tooltip.Provider = TooltipPrimitive.TooltipProvider;
+
 export default Tooltip;
