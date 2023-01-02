@@ -44,7 +44,7 @@ export const CardHeader = styled('div', {
   alignItems: 'center',
   borderTopLeftRadius: 'var(--border-radius-1)',
   borderTopRightRadius: 'var(--border-radius-1)',
-  minHeight: '50px',
+  minHeight: 'var(--space-8)',
   padding: '0px 24px',
   color: 'var(--maximeheckel-colors-typeface-tertiary)',
   fontWeight: 500,
