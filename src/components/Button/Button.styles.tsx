@@ -96,8 +96,7 @@ export const StyledIconButton = styled('button', {
   cursor: 'pointer',
   border: '0',
   /* Constant properties */
-  width: '44px',
-  height: '44px',
+
   background: 'transparent',
   transition: 'color 0.3s ease, transform 0.3s ease',
   borderRadius: 'var(--border-radius-1)',
@@ -115,7 +114,7 @@ export const StyledIconButton = styled('button', {
     height: '100%',
     borderRadius: 'var(--corner, var(--border-radius-1))',
     transition:
-      'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease,\n      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
+      'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
     background: 'var(--background, var(--maximeheckel-colors-foreground))',
     transform: 'scale(var(--button-background-scale, 1)) translateZ(0)',
     border:
@@ -151,5 +150,34 @@ export const StyledIconButton = styled('button', {
 
   '&:active': {
     '--button-content-scale': '0.95',
+  },
+
+  variants: {
+    size: {
+      small: {
+        width: '32px',
+        height: '32px',
+
+        // --space-4
+        '& svg': {
+          width: '16px',
+          height: '16px',
+        },
+      },
+
+      large: {
+        width: '44px',
+        height: '44px',
+
+        '& svg': {
+          width: '22px',
+          height: '22px',
+        },
+      },
+    },
+  },
+
+  defaultVariants: {
+    size: 'large',
   },
 });

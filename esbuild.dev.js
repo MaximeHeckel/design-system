@@ -19,6 +19,20 @@ esbuild
   .build({
     ...sharedConfig,
     entryPoints: ['src/index.ts'],
+    outdir: 'dist/cjs',
+    sourcemap: true,
+    format: 'cjs',
+    watch: true,
+    banner: {
+      js: "const { createElement, Fragment } = require('react');\n",
+    },
+  })
+  .catch(() => process.exit(1));
+
+esbuild
+  .build({
+    ...sharedConfig,
+    entryPoints: ['src/index.ts'],
     outdir: 'dist/esm',
     sourcemap: true,
     format: 'esm',
