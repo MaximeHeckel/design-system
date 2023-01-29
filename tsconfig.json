@@ -11,7 +11,7 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "jsx": "react-jsx",
-        "lib": ["dom", "es2017"],
+        "lib": ["dom", "es2022"],
         "module": "ESNext",
         "moduleResolution": "node",
         "noFallthroughCasesInSwitch": true,
