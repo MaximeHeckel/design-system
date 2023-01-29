@@ -11,6 +11,10 @@ on:
           - patch
           - minor
           - major
+          - prerelease
+          - prepatch
+          - preminor
+          - premajor
 
 env:
   NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
