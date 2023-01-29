@@ -6,6 +6,7 @@ export { default as Button } from './components/Button';
 export { default as Callout } from './components/Callout';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';
+export { default as Details } from './components/Details';
 export { default as Flex } from './components/Flex';
 export { default as Grid } from './components/Grid';
 export { default as Icon } from './components/Icon';
@@ -53,3 +54,4 @@ export {
 } from './lib/stitches.config';
 export { globalStyles } from './lib/globalStyles';
 export type { CSS, VariantProps } from './lib/stitches.config';
+export { extractChildren } from './lib/utils/extractChildren';
