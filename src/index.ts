@@ -55,3 +55,4 @@ export {
 export { globalStyles } from './lib/globalStyles';
 export type { CSS, VariantProps } from './lib/stitches.config';
 export { extractChildren } from './lib/utils/extractChildren';
+export { isElementOfType } from './lib/utils/isElementOfType';
