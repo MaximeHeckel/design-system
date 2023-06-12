@@ -24,25 +24,21 @@ const Heading = (props: HeadingProps) => {
       fontWeight: 'var(--font-weight-4)',
       lineHeight: '1.6818',
       letterSpacing: '0px',
-      marginBottom: '1.45rem',
     },
     2: {
       fontWeight: 'var(--font-weight-4)',
       lineHeight: '1.6818',
       letterSpacing: '0px',
-      marginBottom: '1.45rem',
     },
     3: {
       fontWeight: 'var(--font-weight-4)',
       lineHeight: '1.6818',
       letterSpacing: '0px',
-      marginBottom: '1.45rem',
     },
     4: {
       fontWeight: 'var(--font-weight-4)',
       lineHeight: '1.6818',
       letterSpacing: '0px',
-      marginBottom: '1.45rem',
     },
   };
 

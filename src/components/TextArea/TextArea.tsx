@@ -18,16 +18,7 @@ const TextArea = React.forwardRef(
 
     return (
       <div>
-        {label ? (
-          <Label
-            htmlFor={id}
-            style={{
-              marginBottom: '8px',
-            }}
-          >
-            {label}
-          </Label>
-        ) : null}
+        {label ? <Label htmlFor={id}>{label}</Label> : null}
         <StyledTextArea
           id={id}
           disabled={disabled}

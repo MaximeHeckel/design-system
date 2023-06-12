@@ -5,7 +5,7 @@ export const BlockquoteWrapper = styled('blockquote', {
   /**
    * Make it fullbleed!
    */
-  margin: '0 -50vw 2.25rem -50vw',
+  margin: '0 -50vw 0 -50vw',
   position: 'relative',
   left: '50%',
   right: '50%',

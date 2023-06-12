@@ -29,16 +29,7 @@ const TextInput = (props: TextInputProps) => {
 
   return (
     <StyledInputWrapper className={isValid ? 'valid' : ''} variant={type}>
-      {label ? (
-        <Label
-          htmlFor={id}
-          style={{
-            marginBottom: '8px',
-          }}
-        >
-          {label}
-        </Label>
-      ) : null}
+      {label ? <Label htmlFor={id}>{label}</Label> : null}
       <Box css={{ position: 'relative' }}>
         <StyledInput
           id={id}
