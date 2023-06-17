@@ -11,7 +11,6 @@ const Label = (props: React.LabelHTMLAttributes<HTMLLabelElement>) => {
         cursor: 'pointer',
         userSelect: 'none',
         marginRight: '8px',
-        marginBottom: '0px',
         letterSpacing: '0px',
         verticalAlign: 'top',
       }}

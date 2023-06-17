@@ -51,7 +51,7 @@ const Details = (props: DetailsProps) => {
 
   return (
     <CollapsibleRoot asChild open={open}>
-      <Card css={{ marginBottom: '2.25rem' }} data-card-details>
+      <Card css={{ width: '100%' }} data-card-details>
         <details ref={detailsRef}>
           {SummaryComponent}
           <CollapsibleContent ref={contentRef}>{rest}</CollapsibleContent>

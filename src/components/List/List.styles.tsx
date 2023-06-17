@@ -30,7 +30,7 @@ export const StyledListItem = styled('li', {
 });
 
 export const StyledList = styled('div', {
-  margin: '0 0 1.45rem 0',
+  margin: 0,
   padding: '0',
   color: 'inherit',
   listStylePosition: 'outside',

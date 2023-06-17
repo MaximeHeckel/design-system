@@ -49,13 +49,8 @@ export const StyledCalloutLabelWrapper = styled('div', {
 });
 
 export const StyledCallout = styled('aside', {
-  '*:last-child': {
-    marginBottom: '0px',
-  },
-
   position: 'relative',
   padding: '30px 30px',
-  marginBottom: '2.25rem',
   borderRadius: 'var(--border-radius-1)',
   color: 'var(--maximeheckel-colors-typeface-primary)',
   border: '1px solid var(--maximeheckel-colors-emphasis)',

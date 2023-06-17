@@ -15,7 +15,7 @@ import { EMProps, StrongProps } from './Typography.types';
  */
 
 const Text = styled('span', {
-  margin: '0 0 2.25rem 0',
+  margin: 0,
   padding: 0,
   textRendering: 'optimizeLegibility',
 
