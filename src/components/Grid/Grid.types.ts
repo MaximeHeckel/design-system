@@ -16,6 +16,7 @@ export type JustifySelfVariantType = VariantProps<
 export type PlaceSelfVariantType = VariantProps<typeof S.GridItem>['placeSelf'];
 
 export interface GridItemProps {
+  as?: React.ElementType;
   children?: React.ReactNode;
   area?: string;
   col?: number;
@@ -33,6 +34,7 @@ export interface GridItemProps {
 }
 
 export interface GridProps {
+  as?: React.ElementType;
   autoColumns?: string;
   autoRows?: string;
   flow?: FlowVariantType;
@@ -47,7 +49,3 @@ export interface GridProps {
   children?: React.ReactNode;
   css?: CSS;
 }
-
-export type GridComponentType = ForwardRefExoticComponent<GridProps> & {
-  Item?: React.FC;
-};

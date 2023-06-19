@@ -1,10 +1,17 @@
 import { forwardRef, ForwardedRef } from 'react';
 import * as S from './Grid.styles';
-import { GridComponentType } from './Grid.types';
+import { GridProps } from './Grid.types';
 import GridItem from './GridItem';
 
-const Grid: GridComponentType = forwardRef(
-  (props, ref: ForwardedRef<HTMLDivElement>) => {
+interface GridComposition
+  extends React.ForwardRefExoticComponent<
+    GridProps & React.RefAttributes<HTMLDivElement>
+  > {
+  Item: typeof GridItem;
+}
+
+const Grid = forwardRef(
+  (props: GridProps, ref: ForwardedRef<HTMLDivElement>) => {
     const {
       children,
       css,
@@ -36,6 +43,10 @@ const Grid: GridComponentType = forwardRef(
 );
 
 Grid.displayName = 'Grid';
-Grid.Item = GridItem;
 
-export default Grid;
+const ComposableGrid = {
+  ...Grid,
+  Item: GridItem,
+} as GridComposition;
+
+export default ComposableGrid;
