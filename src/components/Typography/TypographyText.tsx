@@ -56,7 +56,7 @@ const Text = styled('span', {
         fontSize: 'var(--font-size-1)',
       },
       2: {
-        fontSize: 'var(--font-size-2)',
+        fontSize: 'var(--font-size-1)',
       },
       3: {
         fontSize: 'var(--font-size-3)',
@@ -92,17 +92,17 @@ const Text = styled('span', {
       danger: { color: 'var(--maximeheckel-colors-danger)' },
     },
     weight: {
-      1: {
-        fontWeight: 'var(--font-weight-1)',
-      },
+      // 1: {
+      //   fontWeight: 'var(--font-weight-1)',
+      // },
       2: {
-        fontWeight: 'var(--font-weight-2)',
+        fontWeight: 'var(--font-weight-400)',
       },
       3: {
-        fontWeight: 'var(--font-weight-3)',
+        fontWeight: 'var(--font-weight-500)',
       },
       4: {
-        fontWeight: 'var(--font-weight-4)',
+        fontWeight: 'var(--font-weight-600)',
       },
     },
     gradient: {

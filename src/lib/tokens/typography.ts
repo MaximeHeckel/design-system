@@ -8,25 +8,16 @@ export const fonts = {
 };
 
 export const fontSizes = {
-  /* 
-    Note: we set --font-size-1 in px on purpose: 14px is the smallest font we should allow in the UI 
-    to pass mobile usability issue. Setting it to REM would shrink it to 12px on mobile which is 
-    too small
-    */
-  '--font-size-1': '14px;' /*0.75rem*/,
-  '--font-size-2': '0.875rem' /* 16px */,
-  '--font-size-3': '1rem',
-  '--font-size-4': '1.125rem',
-  '--font-size-5': '1.25rem',
-  '--font-size-6': '1.5rem',
-  '--font-size-7': '2rem',
+  '--font-size-1': '14px',
+  '--font-size-3': '16px',
+  '--font-size-4': '18px',
+  '--font-size-5': '20px',
+  '--font-size-6': '24px',
+  '--font-size-7': '32px',
 };
 
 export const fontWeights = {
-  '--font-weight-1': '300',
-  '--font-weight-2': '400',
-  '--font-weight-3': '500',
-  '--font-weight-4': '600',
+  '--font-weight-400': '400',
+  '--font-weight-500': '500',
+  '--font-weight-600': '600',
 };
-
-/* TODO: Define line height tokens with `--leading` */

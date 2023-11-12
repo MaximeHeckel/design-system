@@ -32,7 +32,7 @@ export const StyledCalloutLabelWrapper = styled('div', {
   padding: '8px',
   color: 'var(--maximeheckel-colors-body)',
   fontSize: 'var(--font-size-1)',
-  fontWeight: 'var(--font-weight-3)',
+  fontWeight: 'var(--font-weight-500)',
   userSelect: 'none',
   background: 'var(--icon-background, var(--maximeheckel-colors-body))',
 

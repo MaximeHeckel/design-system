@@ -8,7 +8,7 @@ export const StyledPill = styled('span', {
   minWidth: '40px',
   height: '28px',
   fontSize: 'var(--font-size-1)',
-  fontWeight: 'var(--font-weight-3)',
+  fontWeight: 'var(--font-weight-500)',
   cursor: 'default',
   userSelect: 'none',
   borderRadius: 'var(--border-radius-1)',

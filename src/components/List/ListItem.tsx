@@ -8,7 +8,7 @@ const ListItem: React.FC<React.LiHTMLAttributes<HTMLLIElement>> = (props) => {
   return (
     <StyledListItem {...rest}>
       <span data-list-item>
-        <Icon.Arrow variant="info" />
+        <Icon.Arrow size="5" variant="info" />
       </span>
       <div>{children}</div>
     </StyledListItem>

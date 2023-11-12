@@ -29,7 +29,7 @@ export const BlockquoteContent = styled(Box, {
     marginBottom: 0,
     fontSize: 'var(--font-size-6) !important',
     lineHeight: '1.6818 !important',
-    fontWeight: 'var(--font-weight-2) !important',
+    fontWeight: 'var(--font-weight-400) !important',
     fontStyle: 'italic',
   },
 });

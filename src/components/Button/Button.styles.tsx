@@ -16,8 +16,8 @@ export const StyledButton = styled('button', {
   border: '0',
   font: 'inherit',
   /* Constant properties */
-  fontSize: 'var(--font-size-2)',
-  fontWeight: 'var(--font-weight-3)',
+  fontSize: 'var(--font-size-1)',
+  fontWeight: 'var(--font-weight-500)',
   height: '44px',
   width: 'max-content',
   padding: '11px 16px',

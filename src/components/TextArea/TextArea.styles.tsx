@@ -11,7 +11,7 @@ export const StyledTextArea = styled('textarea', {
   margin: 0,
   padding: '8px 16px',
 
-  fontSize: 'var(--font-size-2)',
+  fontSize: 'var(--font-size-1)',
   fontFamily: 'inherit',
   lineHeight: '26px',
   color: 'var(--maximeheckel-colors-typeface-primary)',

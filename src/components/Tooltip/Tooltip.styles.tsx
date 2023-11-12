@@ -31,7 +31,7 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
   color: 'hsl(var(--palette-gray-00))',
   background: 'hsl(var(--palette-gray-75))',
   borderRadius: 'var(--border-radius-0)',
-  fontWeight: 'var(--font-weight-3)',
+  fontWeight: 'var(--font-weight-500)',
   fontSize: 'var(--font-size-1)',
   padding: '4px 10px',
   whiteSpace: 'nowrap',
