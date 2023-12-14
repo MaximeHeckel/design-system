@@ -9,7 +9,7 @@ export const StyledInput = styled('input', {
   position: 'relative',
   display: 'block',
   margin: 0,
-  padding: 'var(--input-inner-padding, 8px 40px 8px 16px)',
+  padding: 'var(--input-inner-padding, 5px 40px 5px 16px)',
 
   fontSize: 'var(--font-size-1)',
   fontFamily: 'inherit',
@@ -44,7 +44,7 @@ export const StyledInput = styled('input', {
   variants: {
     variant: {
       email: {
-        '--input-inner-padding': '8px 16px 8px 40px',
+        '--input-inner-padding': '5px 16px 5px 40px',
       },
       password: {},
       search: {},
@@ -120,7 +120,7 @@ export const StyledInputWrapper = styled('div', {
     variant: {
       email: {
         svg: {
-          top: '12px',
+          top: '9px',
           left: '12px',
         },
 
@@ -129,7 +129,7 @@ export const StyledInputWrapper = styled('div', {
           '--at-sign-delay': '0s',
           '--tick': '0',
           '--tick-delay': '0.5s',
-          '--icon-color': 'hsl(var(--palette-green-65))',
+          '--icon-color': 'var(--green-1000)',
         },
       },
       password: {
@@ -139,7 +139,7 @@ export const StyledInputWrapper = styled('div', {
           MozAppearance: 'none',
           height: '22px',
           width: '22px',
-          top: '12px',
+          top: '9px',
           right: '14px',
           background: 'none',
           border: 'none',

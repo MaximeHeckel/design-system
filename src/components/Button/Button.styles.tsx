@@ -18,7 +18,7 @@ export const StyledButton = styled('button', {
   /* Constant properties */
   fontSize: 'var(--font-size-1)',
   fontWeight: 'var(--font-weight-500)',
-  height: '44px',
+  height: '38px',
   width: 'max-content',
   padding: '11px 16px',
   transition: 'background 0.2s, transform 0.2s, color 0.2s, box-shadow 0.3s',
@@ -43,7 +43,7 @@ export const StyledButton = styled('button', {
     variant: {
       primary: {
         '--background': 'var(--maximeheckel-colors-brand)',
-        '--color': 'hsl(var(--palette-gray-00))',
+        '--color': 'var(--white)',
         '&:disabled': {
           '--background': 'var(--maximeheckel-form-input-disabled)',
           '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
@@ -160,18 +160,18 @@ export const StyledIconButton = styled('button', {
 
         // --space-4
         '& svg': {
-          width: '16px',
-          height: '16px',
+          width: '14px',
+          height: '14px',
         },
       },
 
       large: {
-        width: '44px',
-        height: '44px',
+        width: '38px',
+        height: '38px',
 
         '& svg': {
-          width: '22px',
-          height: '22px',
+          width: '20px',
+          height: '20px',
         },
       },
     },

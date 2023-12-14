@@ -100,12 +100,12 @@ export const StyledAnchor = styled('a', {
         '--hover-color': 'unset',
 
         '&:focus': {
-          '--border-color': 'hsl(var(--palette-blue-40))',
+          '--border-color': 'var(--maximeheckel-colors-brand)',
         },
 
         '@media (hover: hover) and (pointer: fine)': {
           '&:hover': {
-            '--border-color': 'hsl(var(--palette-blue-40))',
+            '--border-color': 'var(--maximeheckel-colors-brand)',
           },
         },
       },

@@ -1,6 +1,5 @@
 import { PillProps } from './Pill.types';
 import { StyledPill } from './Pill.styles';
-import useTheme from 'src/hooks/useTheme';
 
 /** IDEA
  *  New pill style:
@@ -8,10 +7,9 @@ import useTheme from 'src/hooks/useTheme';
  * - solid background-color = --foreground-color ?
  */
 const Pill = (props: PillProps) => {
-  const theme = useTheme();
   const { children, variant } = props;
   return (
-    <StyledPill {...props} dark={theme.dark} variant={variant}>
+    <StyledPill {...props} variant={variant}>
       {children}
     </StyledPill>
   );

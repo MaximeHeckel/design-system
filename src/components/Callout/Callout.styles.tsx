@@ -6,9 +6,9 @@ export const StyledCalloutIconWrapper = styled('div', {
   top: '-24px',
   right: '-16px',
   borderRadius: '50%',
-  padding: '8px',
+  padding: '6px',
   color: 'var(--maximeheckel-colors-body)',
-  border: '8px solid var(--maximeheckel-colors-body)',
+  border: '6px solid var(--maximeheckel-colors-body)',
   background: 'var(--icon-background, var(--maximeheckel-colors-body))',
 
   variants: {
@@ -50,7 +50,7 @@ export const StyledCalloutLabelWrapper = styled('div', {
 
 export const StyledCallout = styled('aside', {
   position: 'relative',
-  padding: '30px 30px',
+  padding: '24px 24px',
   borderRadius: 'var(--border-radius-1)',
   color: 'var(--maximeheckel-colors-typeface-primary)',
   border: '1px solid var(--maximeheckel-colors-emphasis)',
