@@ -56,7 +56,7 @@ CardHeader.displayName = 'CardHeader';
 
 export const CardBody = styled('div', {
   overflow: 'hidden',
-  padding: '36px 24px',
+  padding: '24px 24px',
   position: 'relative',
 
   variants: {

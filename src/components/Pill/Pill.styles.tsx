@@ -27,11 +27,11 @@ export const StyledPill = styled('span', {
       },
       success: {
         '--pill-background': 'var(--maximeheckel-colors-success-emphasis)',
-        '--pill-color': 'hsl(var(--palette-green-80))',
+        '--pill-color': 'var(--maximeheckel-colors-success)',
       },
       warning: {
         '--pill-background': 'var(--maximeheckel-colors-warning-emphasis)',
-        '--pill-color': 'hsl(var(--palette-orange-80))',
+        '--pill-color': 'var(--maximeheckel-colors-warning)',
       },
       danger: {
         '--pill-background': 'var(--maximeheckel-colors-danger-emphasis)',
@@ -39,21 +39,4 @@ export const StyledPill = styled('span', {
       },
     },
   },
-
-  compoundVariants: [
-    {
-      variant: 'success',
-      dark: true,
-      css: {
-        '--pill-color': 'hsla(var(--palette-green-45))',
-      },
-    },
-    {
-      variant: 'warning',
-      dark: true,
-      css: {
-        '--pill-color': 'hsla(var(--palette-orange-45))',
-      },
-    },
-  ],
 });
