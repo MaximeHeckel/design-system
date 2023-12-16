@@ -118,7 +118,7 @@ export const StyledIconButton = styled('button', {
     background: 'var(--background, var(--maximeheckel-colors-foreground))',
     transform: 'scale(var(--button-background-scale, 1)) translateZ(0)',
     border:
-      'var(--border-thickness, 1px) solid var(--border-color, transparent)',
+      'var(--border-thickness, 1px) solid var(--border-color, oklch(from var(--maximeheckel-border-color) l c h / 60%))',
     boxShadow: 'var(--shadow, none)',
   },
 
