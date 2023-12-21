@@ -120,6 +120,11 @@ export const StyledIconButton = styled('button', {
     border:
       'var(--border-thickness, 1px) solid var(--border-color, oklch(from var(--maximeheckel-border-color) l c h / 60%))',
     boxShadow: 'var(--shadow, none)',
+
+    '@supports not (color: rgb(from white r g b))': {
+      border:
+        'var(--border-thickness, 1px) solid var(--border-color, var(--maximeheckel-border-color))',
+    },
   },
 
   '&:disabled': {

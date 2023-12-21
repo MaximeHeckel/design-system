@@ -76,6 +76,7 @@ const darkTheme = {
     '--maximeheckel-colors-body': 'var(--gray-100)',
     '--maximeheckel-colors-header': 'oklch(from var(--gray-100) l c h / 40%)',
     '--maximeheckel-colors-emphasis': 'oklch(from var(--blue-800) l c h / 7%)',
+
     '--maximeheckel-colors-foreground': 'var(--gray-300)',
     '--maximeheckel-colors-danger': 'var(--red-1000)',
     '--maximeheckel-colors-danger-emphasis':
@@ -106,6 +107,17 @@ const darkTheme = {
     '--token-keyword': 'var(--blue-700)',
     '--token-function': 'var(--pink-300)',
     '--token-punctuation': 'var(--blue-600)',
+
+    '@supports not (color: rgb(from white r g b))': {
+      '--maximeheckel-colors-header':
+        'oklch(18.68% 0.01 var(--base-hue) / 40%)',
+      '--maximeheckel-colors-emphasis':
+        'oklch(64.6% 0.172 var(--base-hue) / 7%)',
+
+      '--maximeheckel-colors-danger-emphasis': 'oklch(64.51% 0.204 22 / 10%)',
+      '--maximeheckel-colors-warning-emphasis': 'oklch(76.91% 0.165 60 / 10%)',
+      '--maximeheckel-colors-success-emphasis': 'oklch(86.02% 0.176 170 / 10%)',
+    },
   },
 };
 

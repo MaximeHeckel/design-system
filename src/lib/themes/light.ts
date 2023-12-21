@@ -106,6 +106,19 @@ const lightTheme = {
     '--token-keyword': 'var(--blue-1000)',
     '--token-function': 'var(--pink-600)',
     '--token-punctuation': 'var(--blue-900)',
+
+    '@supports not (color: rgb(from white r g b))': {
+      '--maximeheckel-colors-header':
+        'oklch(99.24% 0.008 var(--base-hue) / 40%)',
+      '--maximeheckel-colors-emphasis':
+        'oklch(64.6% 0.172 var(--base-hue) / 7%)',
+      '--maximeheckel-colors-foreground':
+        'oklch(98.08% 0.008 var(--base-hue) / 100%)',
+
+      '--maximeheckel-colors-danger-emphasis': 'oklch(91.3% 0.134 170 / 10%)',
+      '--maximeheckel-colors-warning-emphasis': 'oklch(54.63% 0.140 60 / 10%)',
+      '--maximeheckel-colors-success-emphasis': 'oklch(88.54% 0.19 170 / 10%)',
+    },
   },
 };
 
