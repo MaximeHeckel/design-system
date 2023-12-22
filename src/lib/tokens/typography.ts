@@ -19,5 +19,5 @@ export const fontSizes = {
 export const fontWeights = {
   '--font-weight-400': '400',
   '--font-weight-500': '500',
-  '--font-weight-600': '600',
+  '--font-weight-600': '560',
 };
