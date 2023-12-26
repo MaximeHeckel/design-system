@@ -69,8 +69,18 @@ const darkTheme = {
     '--orange-1100': 'oklch(83.38% 0.121 60)',
     '--orange-1200': 'oklch(90.99% 0.066 60)',
 
-    '--pink-300': 'oklch(72.39% 0.197 352)',
-    '--pink-600': 'oklch(54.25% 0.218 352)',
+    '--pink-100': 'oklch(91.7% 0.052 352)',
+    '--pink-200': 'oklch(90.69% 0.059 352)',
+    '--pink-300': 'oklch(89.72% 0.06 352)',
+    '--pink-400': 'oklch(86.75% 0.086 352)',
+    '--pink-500': 'oklch(82.97% 0.114 352)',
+    '--pink-600': 'oklch(77.72% 0.155 352)',
+    '--pink-700': 'oklch(73.12% 0.194 352)',
+    '--pink-800': 'oklch(68.84% 0.231 352)',
+    '--pink-900': 'oklch(65.43% 0.257 352)',
+    '--pink-1000': 'oklch(55.6% 0.24 352)',
+    '--pink-1100': 'oklch(42.39% 0.195 352)',
+    '--pink-1200': 'oklch(30.21% 0.138 352)',
 
     '--maximeheckel-colors-brand': 'var(--blue-800)',
     '--maximeheckel-colors-body': 'var(--gray-100)',
@@ -105,7 +115,7 @@ const darkTheme = {
     '--token-symbol': 'var(--blue-800)',
     '--token-operator': 'var(--orange-1200)',
     '--token-keyword': 'var(--blue-700)',
-    '--token-function': 'var(--pink-300)',
+    '--token-function': 'var(--pink-400)',
     '--token-punctuation': 'var(--blue-600)',
 
     '@supports not (color: rgb(from white r g b))': {
