@@ -17,14 +17,12 @@ export const StyledRadio = styled('input', {
 
   // TODO: Custom token "round"?
   borderRadius: '50%',
-  border:
-    '1px solid var(--border-color, var(--maximeheckel-form-input-border))',
-  background: 'var(--background, var(--maximeheckel-form-input-background))',
+  border: '1px solid var(--border-color, var(--input-border))',
+  background: 'var(--background, var(--input-background))',
   boxShadow: 'var(--shadow, none)',
   transition: 'background 0.3s, border-color 0.3s, box-shadow 0.2s',
 
-  '--shadow-hover-primary':
-    '0 2px 20px 3px var(--maximeheckel-form-input-focus)',
+  '--shadow-hover-primary': '0 2px 20px 3px var(--input-focus)',
 
   '&:after': {
     content: '',
@@ -37,14 +35,14 @@ export const StyledRadio = styled('input', {
     width: '22px',
     height: '22px',
     borderRadius: '50%',
-    background: 'var(--maximeheckel-form-input-background)',
+    background: 'var(--input-background)',
     opacity: 'var(--opacity, 0)',
     transform: 'scale(var(--scale, 0.7))',
   },
 
   '&:checked': {
-    '--background': 'var(--maximeheckel-form-input-active)',
-    '--border-color': 'var(--maximeheckel-form-input-active)',
+    '--background': 'var(--input-active)',
+    '--border-color': 'var(--input-active)',
     '--d-o': '0.3s',
     '--d-t': '0.6s',
     '--d-t-e': 'cubic-bezier(0.2, 0.85, 0.32, 1.2)',
@@ -53,11 +51,11 @@ export const StyledRadio = styled('input', {
   },
 
   '&:disabled': {
-    '--background': 'var(--maximeheckel-form-input-disabled)',
+    '--background': 'var(--input-disabled)',
     cursor: 'not-allowed',
     opacity: 0.65,
     '&:checked': {
-      '--border-color': 'var(--maximeheckel-form-input-border)',
+      '--border-color': 'var(--input-border)',
     },
     '& + label': {
       cursor: 'not-allowed',
@@ -67,14 +65,14 @@ export const StyledRadio = styled('input', {
   '&:hover': {
     '&:not(:disabled)': {
       '&:not(:checked)': {
-        '--border-color': 'var(--maximeheckel-form-input-active)',
+        '--border-color': 'var(--input-active)',
       },
       '--shadow': 'var(--shadow-hover-primary)',
     },
   },
 
   '&:focus-visible': {
-    '--border-color': 'var(--maximeheckel-form-input-active)',
+    '--border-color': 'var(--input-active)',
     '--shadow': 'var(--shadow-hover-primary)',
   },
 });

@@ -13,7 +13,7 @@ export const BlockquoteWrapper = styled('blockquote', {
 
   paddingTop: '40px',
   paddingBottom: '40px',
-  background: 'var(--maximeheckel-colors-emphasis)',
+  background: 'var(--emphasis)',
   backdropFilter: 'blur(6px)',
 });
 
@@ -23,7 +23,7 @@ export const BlockquoteContent = styled(Box, {
   textAlign: 'center',
   width: '100%',
   margin: '0 auto',
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--text-primary)',
 
   p: {
     marginBottom: 0,

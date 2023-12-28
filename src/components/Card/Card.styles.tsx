@@ -3,18 +3,17 @@ import Box from '../Box';
 
 export const CardWrapper = styled(Box, {
   position: 'relative',
-  background:
-    'var(--card-background, var(--maximeheckel-card-background-color))',
+  background: 'var(--card-background, var(--card-background))',
   backdropFilter: 'var(--card-blur, none)',
   borderRadius: 'var(--border-radius-2)',
   boxShadow: 'var(--card-shadow)',
-  border: '1px solid var(--maximeheckel-border-color)',
+  border: '1px solid var(--border-color)',
   overflow: 'hidden',
 
   variants: {
     glass: {
       true: {
-        '--card-background': 'var(--maximeheckel-colors-foreground)',
+        '--card-background': 'var(--foreground)',
         '--card-blur': 'blur(6px)',
       },
     },
@@ -46,10 +45,10 @@ export const CardHeader = styled('div', {
   borderTopRightRadius: 'var(--border-radius-1)',
   minHeight: 'var(--space-8)',
   padding: '0px 24px',
-  color: 'var(--maximeheckel-colors-typeface-tertiary)',
+  color: 'var(--text-tertiary)',
   fontWeight: 500,
   fontSize: 'var(--font-size-1)',
-  borderBottom: '1px solid var(--maximeheckel-border-color)',
+  borderBottom: '1px solid var(--border-color)',
 });
 
 CardHeader.displayName = 'CardHeader';
@@ -63,7 +62,7 @@ export const CardBody = styled('div', {
     dotMatrix: {
       true: {
         backgroundImage:
-          'radial-gradient(var(--maximeheckel-border-color) 1px, transparent 0)',
+          'radial-gradient(var(--border-color) 1px, transparent 0)',
         backgroundPosition: '50% center',
         backgroundSize: '20px 20px',
       },

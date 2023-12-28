@@ -29,8 +29,7 @@ export const StyledButton = styled('button', {
   transform: 'scale(var(--button-scale, 1)) translateZ(0)',
   boxShadow: 'var(--shadow, none)',
   opacity: 'var(--opacity, 1)',
-  '--shadow-hover-primary':
-    '0 2px 40px -4px var(--maximeheckel-form-input-focus)',
+  '--shadow-hover-primary': '0 2px 40px -4px var(--input-focus)',
 
   '&:active': {
     '--button-scale': '0.95',
@@ -42,11 +41,11 @@ export const StyledButton = styled('button', {
   variants: {
     variant: {
       primary: {
-        '--background': 'var(--maximeheckel-colors-brand)',
+        '--background': 'var(--accent)',
         '--color': 'var(--white)',
         '&:disabled': {
-          '--background': 'var(--maximeheckel-form-input-disabled)',
-          '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+          '--background': 'var(--input-disabled)',
+          '--color': 'var(--text-tertiary)',
         },
 
         '&:hover': {
@@ -60,11 +59,11 @@ export const StyledButton = styled('button', {
         },
       },
       secondary: {
-        '--background': 'var(--maximeheckel-colors-emphasis)',
-        '--color': 'var(--maximeheckel-colors-brand)',
+        '--background': 'var(--emphasis)',
+        '--color': 'var(--accent)',
         '&:disabled': {
-          '--background': 'var(--maximeheckel-form-input-disabled)',
-          '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+          '--background': 'var(--input-disabled)',
+          '--color': 'var(--text-tertiary)',
         },
 
         '&:hover': {
@@ -100,10 +99,9 @@ export const StyledIconButton = styled('button', {
   background: 'transparent',
   transition: 'color 0.3s ease, transform 0.3s ease',
   borderRadius: 'var(--border-radius-1)',
-  color: 'var(--color, var(--maximeheckel-colors-typeface-tertiary))',
+  color: 'var(--color, var(--text-tertiary))',
   transform: 'scale(var(--button-content-scale, 1)) translateZ(0)',
-  '--shadow-hover-primary':
-    '0 2px 40px -4px var(--maximeheckel-form-input-focus)',
+  '--shadow-hover-primary': '0 2px 40px -4px var(--input-focus)',
 
   '&::after': {
     zIndex: '0',
@@ -115,29 +113,29 @@ export const StyledIconButton = styled('button', {
     borderRadius: 'var(--corner, var(--border-radius-1))',
     transition:
       'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-    background: 'var(--background, var(--maximeheckel-colors-foreground))',
+    background: 'var(--background, var(--foreground))',
     transform: 'scale(var(--button-background-scale, 1)) translateZ(0)',
     border:
-      'var(--border-thickness, 1px) solid var(--border-color, oklch(from var(--maximeheckel-border-color) l c h / 60%))',
+      'var(--border-thickness, 1px) solid var(--border-color, oklch(from var(--border-color) l c h / 60%))',
     boxShadow: 'var(--shadow, none)',
 
     '@supports not (color: rgb(from white r g b))': {
       border:
-        'var(--border-thickness, 1px) solid var(--border-color, var(--maximeheckel-border-color))',
+        'var(--border-thickness, 1px) solid var(--border-color, var(--border-color))',
     },
   },
 
   '&:disabled': {
     cursor: 'not-allowed',
-    '--background': 'var(--maximeheckel-form-input-disabled)',
-    '--color': 'var(--maximeheckel-colors-typeface-tertiary)',
+    '--background': 'var(--input-disabled)',
+    '--color': 'var(--text-tertiary)',
   },
 
   '&:hover': {
     '&:not(:disabled)': {
-      '--border-color': 'var(--maximeheckel-colors-brand)',
+      '--border-color': 'var(--accent)',
       '--border-thickness': '2px',
-      '--color': 'var(--maximeheckel-colors-brand)',
+      '--color': 'var(--accent)',
       '--corner': 'calc(var(--border-radius-1) + 2px)',
       '--button-background-scale': '0.92',
       '--shadow': 'var(--shadow-hover-primary)',
@@ -145,9 +143,9 @@ export const StyledIconButton = styled('button', {
   },
 
   '&:focus-visible': {
-    '--border-color': 'var(--maximeheckel-colors-brand)',
+    '--border-color': 'var(--accent)',
     '--border-thickness': '2px',
-    '--color': 'var(--maximeheckel-colors-brand)',
+    '--color': 'var(--accent)',
     '--corner': 'calc(var(--border-radius-1) + 2px)',
     '--button-background-scale': 0.92,
     '--shadow': 'var(--shadow-hover-primary)',

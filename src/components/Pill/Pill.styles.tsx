@@ -22,20 +22,20 @@ export const StyledPill = styled('span', {
     },
     variant: {
       info: {
-        '--pill-background': 'var(--maximeheckel-colors-emphasis)',
-        '--pill-color': 'var(--maximeheckel-colors-brand)',
+        '--pill-background': 'var(--emphasis)',
+        '--pill-color': 'var(--accent)',
       },
       success: {
-        '--pill-background': 'var(--maximeheckel-colors-success-emphasis)',
-        '--pill-color': 'var(--maximeheckel-colors-success)',
+        '--pill-background': 'var(--success-emphasis)',
+        '--pill-color': 'var(--success)',
       },
       warning: {
-        '--pill-background': 'var(--maximeheckel-colors-warning-emphasis)',
-        '--pill-color': 'var(--maximeheckel-colors-warning)',
+        '--pill-background': 'var(--warning-emphasis)',
+        '--pill-color': 'var(--warning)',
       },
       danger: {
-        '--pill-background': 'var(--maximeheckel-colors-danger-emphasis)',
-        '--pill-color': 'var(--maximeheckel-colors-danger)',
+        '--pill-background': 'var(--danger-emphasis)',
+        '--pill-color': 'var(--danger)',
       },
     },
   },

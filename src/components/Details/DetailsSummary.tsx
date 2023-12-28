@@ -24,7 +24,7 @@ const Summary = (props: SummaryProps) => {
             right: 'var(--space-4)',
             top: 22,
             borderRadius: '50%',
-            background: 'var(--maximeheckel-colors-emphasis)',
+            background: 'var(--emphasis)',
             width: 'var(--space-6)',
             height: 'var(--space-6)',
           }}

@@ -82,32 +82,29 @@ const darkTheme = {
     '--pink-1100': 'oklch(42.39% 0.195 352)',
     '--pink-1200': 'oklch(30.21% 0.138 352)',
 
-    '--maximeheckel-colors-brand': 'var(--blue-800)',
-    '--maximeheckel-colors-body': 'var(--gray-100)',
-    '--maximeheckel-colors-header': 'oklch(from var(--gray-100) l c h / 40%)',
-    '--maximeheckel-colors-emphasis': 'oklch(from var(--blue-800) l c h / 7%)',
+    '--accent': 'var(--blue-800)',
+    '--background': 'var(--gray-100)',
+    '--header': 'oklch(from var(--gray-100) l c h / 40%)',
+    '--emphasis': 'oklch(from var(--blue-800) l c h / 7%)',
 
-    '--maximeheckel-colors-foreground': 'var(--gray-300)',
-    '--maximeheckel-colors-danger': 'var(--red-1000)',
-    '--maximeheckel-colors-danger-emphasis':
-      'oklch(from var(--red-1000) l c h / 10%)',
-    '--maximeheckel-colors-warning': 'var(--orange-1000)',
-    '--maximeheckel-colors-warning-emphasis':
-      'oklch(from var(--orange-1000) l c h / 10%)',
-    '--maximeheckel-colors-success': 'var(--green-900)',
-    '--maximeheckel-colors-success-emphasis':
-      'oklch(from var(--green-900) l c h / 10%)',
+    '--foreground': 'var(--gray-300)',
+    '--danger': 'var(--red-1000)',
+    '--danger-emphasis': 'oklch(from var(--red-1000) l c h / 10%)',
+    '--warning': 'var(--orange-1000)',
+    '--warning-emphasis': 'oklch(from var(--orange-1000) l c h / 10%)',
+    '--success': 'var(--green-900)',
+    '--success-emphasis': 'oklch(from var(--green-900) l c h / 10%)',
 
-    '--maximeheckel-colors-typeface-primary': 'var(--blue-400)',
-    '--maximeheckel-colors-typeface-secondary': 'var(--gray-1100)',
-    '--maximeheckel-colors-typeface-tertiary': 'var(--gray-1000)',
-    '--maximeheckel-border-color': 'var(--gray-400)',
-    '--maximeheckel-card-background-color': 'var(--gray-300)',
-    '--maximeheckel-form-input-active': 'var(--blue-800)',
-    '--maximeheckel-form-input-background': 'var(--gray-000)',
-    '--maximeheckel-form-input-disabled': 'var(--gray-700)',
-    '--maximeheckel-form-input-border': 'var(--gray-600)',
-    '--maximeheckel-form-input-focus': 'var(--blue-900)',
+    '--text-primary': 'var(--blue-400)',
+    '--text-secondary': 'var(--gray-1100)',
+    '--text-tertiary': 'var(--gray-1000)',
+    '--border-color': 'var(--gray-400)',
+    '--card-background': 'var(--gray-300)',
+    '--input-active': 'var(--blue-800)',
+    '--input-background': 'var(--gray-000)',
+    '--input-disabled': 'var(--gray-700)',
+    '--input-border': 'var(--gray-600)',
+    '--input-focus': 'var(--blue-900)',
     '--shadow-color': 'var(--local-shadow-color, 223deg 5% 1%)',
     '--code-snippet-background': 'var(--gray-300)',
     '--token-comment': 'var(--gray-1000)',
@@ -119,14 +116,12 @@ const darkTheme = {
     '--token-punctuation': 'var(--blue-600)',
 
     '@supports not (color: rgb(from white r g b))': {
-      '--maximeheckel-colors-header':
-        'oklch(18.68% 0.01 var(--base-hue) / 40%)',
-      '--maximeheckel-colors-emphasis':
-        'oklch(64.6% 0.172 var(--base-hue) / 7%)',
+      '--header': 'oklch(18.68% 0.01 var(--base-hue) / 40%)',
+      '--emphasis': 'oklch(64.6% 0.172 var(--base-hue) / 7%)',
 
-      '--maximeheckel-colors-danger-emphasis': 'oklch(64.51% 0.204 22 / 10%)',
-      '--maximeheckel-colors-warning-emphasis': 'oklch(76.91% 0.165 60 / 10%)',
-      '--maximeheckel-colors-success-emphasis': 'oklch(86.02% 0.176 170 / 10%)',
+      '--danger-emphasis': 'oklch(64.51% 0.204 22 / 10%)',
+      '--warning-emphasis': 'oklch(76.91% 0.165 60 / 10%)',
+      '--success-emphasis': 'oklch(86.02% 0.176 170 / 10%)',
     },
   },
 };

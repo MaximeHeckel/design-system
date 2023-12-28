@@ -54,7 +54,7 @@ export const StyledList = styled('div', {
 
           '&:before': {
             content: "counters(li, '.') '. '",
-            color: 'var(--maximeheckel-colors-brand)',
+            color: 'var(--accent)',
             marginRight: '6px',
           },
         },

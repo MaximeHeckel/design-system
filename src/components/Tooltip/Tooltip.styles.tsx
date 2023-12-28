@@ -28,9 +28,9 @@ const slideLeftAndFadeIn = keyframes({
 });
 
 export const TooltipContent = styled(TooltipPrimitive.Content, {
-  color: 'var(--maximeheckel-colors-typeface-secondary)',
-  background: 'var(--maximeheckel-colors-foreground)',
-  border: '2px solid var(--maximeheckel-border-color)',
+  color: 'var(--text-secondary)',
+  background: 'var(--foreground)',
+  border: '2px solid var(--border-color)',
   borderRadius: 'var(--border-radius-1)',
   fontWeight: 'var(--font-weight-500)',
   fontSize: 'var(--font-size-1)',

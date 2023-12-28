@@ -5,32 +5,32 @@ export const StyledSVG = styled('svg', {
     variant: {
       default: { stroke: 'currentColor', fill: 'none' },
       primary: {
-        stroke: 'var(--maximeheckel-colors-typeface-primary)',
+        stroke: 'var(--text-primary)',
         fill: 'none',
       },
       secondary: {
-        stroke: 'var(--maximeheckel-colors-typeface-secondary)',
+        stroke: 'var(--text-secondary)',
         fill: 'none',
       },
       tertiary: {
-        stroke: 'var(--maximeheckel-colors-typeface-tertiary)',
+        stroke: 'var(--text-tertiary)',
         fill: 'none',
       },
       info: {
-        stroke: 'var(--maximeheckel-colors-brand)',
-        fill: 'var(--maximeheckel-colors-emphasis)',
+        stroke: 'var(--accent)',
+        fill: 'var(--emphasis)',
       },
       danger: {
-        stroke: 'var(--maximeheckel-colors-danger)',
-        fill: 'var(--maximeheckel-colors-danger-emphasis)',
+        stroke: 'var(--danger)',
+        fill: 'var(--danger-emphasis)',
       },
       success: {
-        stroke: 'var(--maximeheckel-colors-success)',
-        fill: 'var(--maximeheckel-colors-success-emphasis)',
+        stroke: 'var(--success)',
+        fill: 'var(--success-emphasis)',
       },
       warning: {
-        stroke: 'var(--maximeheckel-colors-warning)',
-        fill: 'var(--maximeheckel-colors-warning-emphasis)',
+        stroke: 'var(--warning)',
+        fill: 'var(--warning-emphasis)',
       },
     },
     outline: {

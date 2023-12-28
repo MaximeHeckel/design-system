@@ -62,7 +62,7 @@ export const StyledSummary = styled('summary', {
     left: 0,
     width: 2,
     height: 'var(--space-6)',
-    background: 'var(--maximeheckel-colors-brand)',
+    background: 'var(--accent)',
     content: '',
     display: 'inline-block',
     borderRadius: 'var(--border-radius-2)',
@@ -77,13 +77,12 @@ export const StyledSummary = styled('summary', {
   },
 
   '&:focus-visible': {
-    '--indicator-shadow':
-      '0 0px 20px 6px var(--maximeheckel-form-input-focus) !important',
+    '--indicator-shadow': '0 0px 20px 6px var(--input-focus) !important',
     '--indicator-opacity': '1 !important',
   },
 
   '&[data-state="open"]': {
-    '--indicator-shadow': '0 0px 20px 6px var(--maximeheckel-form-input-focus)',
+    '--indicator-shadow': '0 0px 20px 6px var(--input-focus)',
     '--indicator-opacity': 1,
     '--rotation-icon': 'rotate(0deg)',
   },

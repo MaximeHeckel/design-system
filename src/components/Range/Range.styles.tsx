@@ -36,9 +36,8 @@ export const StyledRange = styled('input', {
     height: '24px',
     width: '24px',
     borderRadius: '50%',
-    background: 'var(--maximeheckel-form-input-background)',
-    border:
-      '1px solid var(--border-color, var(--maximeheckel-form-input-border))',
+    background: 'var(--input-background)',
+    border: '1px solid var(--border-color, var(--input-border))',
     marginTop: '-10px',
     cursor: 'grab',
     boxShadow: `var(--shadow, ${Shadows[2]})`,
@@ -50,9 +49,8 @@ export const StyledRange = styled('input', {
     height: '24px',
     width: '24px',
     borderRadius: '50%',
-    background: 'var(--maximeheckel-form-input-background)',
-    border:
-      '1px solid var(--border-color, var(--maximeheckel-form-input-border))',
+    background: 'var(--input-background)',
+    border: '1px solid var(--border-color, var(--input-border))',
     marginTop: '-10px',
     cursor: 'grab',
     boxShadow: `var(--shadow, ${Shadows[2]})`,
@@ -80,26 +78,26 @@ export const StyledRange = styled('input', {
   '&:hover': {
     '&:not(:disabled)': {
       '&::-moz-range-thumb': {
-        '--border-color': 'var(--maximeheckel-form-input-active)',
-        '--shadow': '0 2px 20px 3px var(--maximeheckel-form-input-focus)',
+        '--border-color': 'var(--input-active)',
+        '--shadow': '0 2px 20px 3px var(--input-focus)',
       },
 
       '  &::-webkit-slider-thumb': {
-        '--border-color': 'var(--maximeheckel-form-input-active)',
-        '--shadow': '0 2px 20px 3px var(--maximeheckel-form-input-focus)',
+        '--border-color': 'var(--input-active)',
+        '--shadow': '0 2px 20px 3px var(--input-focus)',
       },
     },
   },
 
   '&:focus-visible': {
     '&::-moz-range-thumb': {
-      '--border-color': 'var(--maximeheckel-form-input-active)',
-      '--shadow': '0 2px 20px 3px var(--maximeheckel-form-input-focus)',
+      '--border-color': 'var(--input-active)',
+      '--shadow': '0 2px 20px 3px var(--input-focus)',
     },
 
     '&::-webkit-slider-thumb': {
-      '--border-color': 'var(--maximeheckel-form-input-active)',
-      '--shadow': '0 2px 20px 3px var(--maximeheckel-form-input-focus)',
+      '--border-color': 'var(--input-active)',
+      '--shadow': '0 2px 20px 3px var(--input-focus)',
     },
   },
 });

@@ -7,9 +7,9 @@ export function adjustSlider(
   // Calculate visible width
   const val = ((value - min) * 100) / (max - min);
 
-  const fillLeft = 'var(--maximeheckel-form-input-active)';
-  const fillLeftDisabled = 'var(--maximeheckel-form-input-border)';
-  const fillRight = 'var(--maximeheckel-form-input-disabled)';
+  const fillLeft = 'var(--input-active)';
+  const fillLeftDisabled = 'var(--input-border)';
+  const fillRight = 'var(--input-disabled)';
 
   return `linear-gradient(to right, ${
     disabled ? fillLeftDisabled : fillLeft

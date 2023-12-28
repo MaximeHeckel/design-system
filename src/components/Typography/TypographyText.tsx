@@ -27,7 +27,7 @@ const Text = styled('span', {
     outline: {
       true: {
         color: 'transparent !important',
-        WebkitTextStrokeColor: 'var(--maximeheckel-colors-typeface-primary)',
+        WebkitTextStrokeColor: 'var(--text-primary)',
         WebkitTextStrokeWidth: '1px',
       },
     },
@@ -83,13 +83,13 @@ const Text = styled('span', {
     },
     variant: {
       default: { color: 'currentColor' },
-      primary: { color: 'var(--maximeheckel-colors-typeface-primary)' },
-      secondary: { color: 'var(--maximeheckel-colors-typeface-secondary)' },
-      tertiary: { color: 'var(--maximeheckel-colors-typeface-tertiary)' },
-      info: { color: 'var(--maximeheckel-colors-brand)' },
-      success: { color: 'var(--maximeheckel-colors-success)' },
-      warning: { color: 'var(--maximeheckel-colors-warning)' },
-      danger: { color: 'var(--maximeheckel-colors-danger)' },
+      primary: { color: 'var(--text-primary)' },
+      secondary: { color: 'var(--text-secondary)' },
+      tertiary: { color: 'var(--text-tertiary)' },
+      info: { color: 'var(--accent)' },
+      success: { color: 'var(--success)' },
+      warning: { color: 'var(--warning)' },
+      danger: { color: 'var(--danger)' },
     },
     weight: {
       // 1: {
