@@ -23,9 +23,6 @@ esbuild
     sourcemap: true,
     format: 'cjs',
     watch: true,
-    banner: {
-      js: "const { createElement, Fragment } = require('react');\n",
-    },
   })
   .catch(() => process.exit(1));
 
@@ -37,8 +34,5 @@ esbuild
     sourcemap: true,
     format: 'esm',
     watch: true,
-    banner: {
-      js: "import { createElement, Fragment } from 'react';\n",
-    },
   })
   .catch(() => process.exit(1));
