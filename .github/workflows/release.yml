@@ -71,8 +71,14 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Setup npm for publishing
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - name: Bump version
         run: npm version ${{ github.event.inputs.version }}
+      - name: Publish
+        run: |
+          npm publish --access public
       - name: Get package.json version
         uses: actions/github-script@v5
         id: get-version
@@ -88,6 +94,3 @@ jobs:
             MaximeHeckel
           title: Bump package.json to version ${{steps.get-version.outputs.result}}
           commit-message: Bump package.json to version ${{steps.get-version.outputs.result}}
-      - name: Publish
-        run: |
-          pnpm publish --access public
