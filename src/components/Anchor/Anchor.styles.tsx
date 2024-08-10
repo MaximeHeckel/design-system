@@ -94,7 +94,7 @@ export const StyledAnchor = styled('a', {
     },
     underline: {
       true: {
-        borderBottom: '2px solid',
+        borderBottom: '1px solid',
         borderColor: 'var(--border-color, transparent)',
 
         '--hover-color': 'unset',

@@ -22,22 +22,22 @@ const Heading = (props: HeadingProps) => {
   const headingCSS: Record<HeadingSizeVariants, CSS> = {
     1: {
       fontWeight: 'var(--font-weight-600)',
-      lineHeight: '1.618',
+      lineHeight: '1.5',
       letterSpacing: '-0.3px',
     },
     2: {
       fontWeight: 'var(--font-weight-600)',
-      lineHeight: '1.618',
+      lineHeight: '1.5',
       letterSpacing: '-0.3px',
     },
     3: {
       fontWeight: 'var(--font-weight-600)',
-      lineHeight: '1.618',
+      lineHeight: '1.5',
       letterSpacing: '-0.3px',
     },
     4: {
       fontWeight: 'var(--font-weight-600)',
-      lineHeight: '1.618',
+      lineHeight: '1.5',
       letterSpacing: '-0.3px',
     },
   };

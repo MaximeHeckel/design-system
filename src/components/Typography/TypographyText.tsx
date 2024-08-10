@@ -34,7 +34,7 @@ const Text = styled('span', {
     spaced: {
       true: {
         letterSpacing: '0.3px',
-        lineHeight: 1.9,
+        lineHeight: 1.75,
       },
     },
     family: {
@@ -92,9 +92,6 @@ const Text = styled('span', {
       danger: { color: 'var(--danger)' },
     },
     weight: {
-      // 1: {
-      //   fontWeight: 'var(--font-weight-1)',
-      // },
       2: {
         fontWeight: 'var(--font-weight-400)',
       },

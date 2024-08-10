@@ -19,6 +19,9 @@ export const StyledCalloutIconWrapper = styled('div', {
       danger: {
         '--icon-background': 'var(--danger)',
       },
+      warning: {
+        '--icon-background': 'var(--warning)',
+      },
     },
   },
 });
@@ -44,6 +47,9 @@ export const StyledCalloutLabelWrapper = styled('div', {
       danger: {
         '--icon-background': 'var(--danger)',
       },
+      warning: {
+        '--icon-background': 'var(--warning)',
+      },
     },
   },
 });
@@ -63,6 +69,9 @@ export const StyledCallout = styled('aside', {
       },
       danger: {
         '--callout-background': 'var(--danger-emphasis)',
+      },
+      warning: {
+        '--callout-background': 'var(--orange-400)',
       },
     },
   },
