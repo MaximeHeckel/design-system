@@ -1,7 +1,7 @@
 import React from 'react';
 import { CSS } from 'src/lib/stitches.config';
 
-export type CalloutVariant = 'info' | 'danger';
+export type CalloutVariant = 'info' | 'danger' | 'warning';
 
 export interface CalloutProps {
   children: React.ReactNode;
