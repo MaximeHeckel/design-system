@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { BlockquoteContent, BlockquoteWrapper } from './Blockquote.styles';
 import { BlockquoteProps } from './Blockquote.types';
 
@@ -14,7 +14,7 @@ const Blockquote = (props: BlockquoteProps) => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
