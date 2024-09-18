@@ -9,7 +9,7 @@ export const BlockquoteWrapper = styled('blockquote', {
   position: 'relative',
   left: '50%',
   right: '50%',
-  width: '100vw',
+  width: 'calc(var(--vw, 1vw) * 100)',
 
   paddingTop: '40px',
   paddingBottom: '40px',
