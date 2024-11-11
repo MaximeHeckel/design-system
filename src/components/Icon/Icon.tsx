@@ -1,4 +1,5 @@
 import {
+  BlueskyIcon,
   ContactIcon,
   EnterIcon,
   ExternalIcon,
@@ -19,6 +20,7 @@ import {
 
 const Icon = () => {};
 
+Icon.Bluesky = BlueskyIcon;
 Icon.Contact = ContactIcon;
 Icon.Enter = EnterIcon;
 Icon.External = ExternalIcon;

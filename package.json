@@ -10,13 +10,13 @@
   "scripts": {
     "build": "node ./esbuild.build.js",
     "clean": "rimraf dist",
-    "dev": "yarn clean && node ./esbuild.dev.js & yarn ts-types --watch",
+    "dev": "pnpm run clean && node ./esbuild.dev.js & pnpm run ts-types --watch",
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
     "lint": "eslint --ext=ts,tsx .",
-    "postbuild": "yarn ts-types",
+    "postbuild": "pnpm run ts-types",
     "postversion": "git push origin v$npm_package_version",
-    "prebuild": "yarn clean",
-    "prepack": "yarn build",
+    "prebuild": "pnpm run clean",
+    "prepack": "pnpm run build",
     "test": "jest",
     "ts-types": "tsc --emitDeclarationOnly --outDir dist",
     "type-check": "tsc --noEmit"
@@ -60,5 +60,5 @@
     "@radix-ui/react-tooltip": "1.0.0",
     "@stitches/react": "^1.2.8"
   },
-  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
+  "packageManager": "pnpm@9.12.3"
 }
