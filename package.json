@@ -16,7 +16,7 @@
     "postbuild": "pnpm run ts-types",
     "postversion": "git push origin v$npm_package_version",
     "prebuild": "pnpm run clean",
-    "prepack": "pnpm run build",
+    "prepack": "pnpm run build && pnpm run postbuild",
     "test": "jest",
     "ts-types": "tsc --emitDeclarationOnly --outDir dist",
     "type-check": "tsc --noEmit"
