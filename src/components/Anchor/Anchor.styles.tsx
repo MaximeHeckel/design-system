@@ -95,17 +95,17 @@ export const StyledAnchor = styled('a', {
     underline: {
       true: {
         borderBottom: '1px solid',
-        borderColor: 'var(--border-color, transparent)',
+        borderColor: 'var(--anchor-border-color, transparent)',
 
         '--hover-color': 'unset',
 
         '&:focus': {
-          '--border-color': 'var(--accent)',
+          '--anchor-border-color': 'var(--accent)',
         },
 
         '@media (hover: hover) and (pointer: fine)': {
           '&:hover': {
-            '--border-color': 'var(--accent)',
+            '--anchor-border-color': 'var(--accent)',
           },
         },
       },
