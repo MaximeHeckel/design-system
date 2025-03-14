@@ -44,11 +44,14 @@ const Text = styled('span', {
       display: {
         fontFamily: 'var(--font-display)',
       },
+      serif: {
+        fontFamily: 'var(--font-serif)',
+      },
       mono: {
         fontFamily: 'var(--font-mono)',
       },
-      numeric: {
-        fontFamily: 'var(--font-numeric)',
+      code: {
+        fontFamily: 'var(--font-mono-code)',
       },
     },
     size: {
@@ -72,6 +75,9 @@ const Text = styled('span', {
       },
       7: {
         fontSize: 'var(--font-size-7)',
+      },
+      '8': {
+        fontSize: 'var(--font-size-8)',
       },
     },
     truncate: {
@@ -141,7 +147,7 @@ const EM = (props: EMProps) => {
 EM.displayName = 'EM';
 
 const Strong = (props: StrongProps) => {
-  return <Text {...props} as="strong" variant="primary" weight="4" />;
+  return <Text {...props} as="strong" variant="primary" weight="3" />;
 };
 
 Strong.displayName = 'Strong';

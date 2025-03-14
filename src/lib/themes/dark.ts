@@ -86,6 +86,7 @@ const darkTheme = {
     '--background': 'var(--gray-100)',
     '--header': 'oklch(from var(--gray-100) l c h / 40%)',
     '--emphasis': 'oklch(from var(--blue-800) l c h / 7%)',
+    '--hyperlink': '#5a9dff',
 
     '--foreground': 'var(--gray-300)',
     '--danger': 'var(--red-1000)',

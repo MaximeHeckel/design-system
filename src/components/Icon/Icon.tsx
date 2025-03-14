@@ -16,6 +16,9 @@ import {
   MapIcon,
   StackIcon,
   XIcon,
+  ChevronIcon,
+  FullScreenIcon,
+  ExternalLinkIcon,
 } from './IconList';
 
 const Icon = () => {};
@@ -37,7 +40,9 @@ Icon.Github = GithubIcon;
 Icon.Map = MapIcon;
 Icon.Stack = StackIcon;
 Icon.X = XIcon;
-
+Icon.Chevron = ChevronIcon;
+Icon.FullScreen = FullScreenIcon;
+Icon.ExternalLink = ExternalLinkIcon;
 Icon.displayName = 'Icon';
 
 export default Icon;

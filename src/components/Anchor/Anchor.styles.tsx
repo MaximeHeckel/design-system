@@ -3,8 +3,8 @@ import { styled } from 'src/lib/stitches.config';
 export const StyledAnchor = styled('a', {
   fontSize: 'inherit',
   lineHeight: 'inherit',
-  color: 'var(--color, var(--accent))',
-  fontWeight: 500,
+  color: 'var(--color, var(--hyperlink))',
+  fontWeight: 'inherit',
   wordBreak: 'break-word',
   textDecoration: 'none',
   outline: 'none',
@@ -29,6 +29,26 @@ export const StyledAnchor = styled('a', {
       true: {
         '--color': 'var(--text-tertiary)',
       },
+    },
+    external: {
+      true: {
+        '--size': '1.4em',
+
+        '&:after': {
+          content: '',
+          display: 'inline-block',
+          verticalAlign: 'middle',
+          width: 'var(--size, 1.05em)',
+          height: 'var(--size, 1.05em)',
+          maskImage: 'var(--icon)',
+          WebkitMaskRepeat: 'no-repeat',
+          backgroundColor: 'currentColor',
+          marginLeft: '0.18em',
+          marginRight: '-0.36em',
+          transform: 'translateY(2px)',
+        },
+      },
+      false: {},
     },
     arrow: {
       left: {
@@ -76,7 +96,7 @@ export const StyledAnchor = styled('a', {
     },
     favicon: {
       true: {
-        '--size': '1.1em',
+        '--size': '1em',
 
         '&:before': {
           content: '',

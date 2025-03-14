@@ -3,10 +3,10 @@ import { styled } from 'src/lib/stitches.config';
 export const StyledCalloutIconWrapper = styled('div', {
   position: 'absolute',
   display: 'flex',
-  top: '-24px',
-  right: '-16px',
+  top: '-20px',
+  right: '-20px',
   borderRadius: '50%',
-  padding: '6px',
+  padding: '4px',
   color: 'var(--background)',
   border: '6px solid var(--background)',
   background: 'var(--icon-background, var(--background))',

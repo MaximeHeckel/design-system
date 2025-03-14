@@ -1,11 +1,11 @@
 import { Shadows, styled } from 'src/lib/stitches.config';
 
 export const StyledInlineCode = styled('code', {
-  fontFamily: 'var(--font-mono)',
+  fontFamily: 'var(--font-mono-code)',
   lineHeight: '1.45rem',
   borderRadius: 'var(--border-radius-1)',
   backgroundColor: 'var(--foreground)',
-  color: 'var(--token-keyword)',
+  color: 'var(--token-punctuation)',
   padding: '2px 6px',
   paddingInline: '6px',
   fontSize: 'var(--font-size-1)',

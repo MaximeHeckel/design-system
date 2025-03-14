@@ -7,9 +7,9 @@ export const StyledListItem = styled('li', {
   lineHeight: '1.9',
   letterSpacing: '0.3px',
 
-  'span[data-list-item]': {
-    paddingRight: '6px',
-    transform: 'translateY(3px)',
+  'div[data-list-item]': {
+    paddingRight: '8px',
+    transform: 'translateY(4px)',
   },
 
   '& > ol': {
