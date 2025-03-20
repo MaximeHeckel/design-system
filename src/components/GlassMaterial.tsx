@@ -1,5 +1,12 @@
 import { styled } from 'src/lib/stitches.config';
 
+const glassMaterialPrimitives = {
+  'background-color': 'oklch(from var(--gray-900) l c h / var(--opacity, 0.3))',
+  'backdrop-filter': 'blur(var(--blur, 12px)) saturate(var(--saturate, 1.15))',
+  border:
+    'var(--thickness, 1px) solid oklch(from var(--gray-1100) l c h / 20%)',
+};
+
 const GlassMaterial = styled('div', {
   borderRadius: 'inherit',
   position: 'absolute',
@@ -7,16 +14,15 @@ const GlassMaterial = styled('div', {
   left: 0,
   right: 0,
   bottom: 0,
-  backgroundColor: 'oklch(from var(--gray-900) l c h / var(--opacity, 0.3))',
+  backgroundColor: glassMaterialPrimitives['background-color'],
   zIndex: -10,
-  backdropFilter: 'blur(var(--blur, 12px)) saturate(var(--saturate, 1.15))',
+  backdropFilter: glassMaterialPrimitives['backdrop-filter'],
   pointerEvents: 'none',
 
   variants: {
     border: {
       true: {
-        border:
-          'var(--thickness, 1px) solid oklch(from var(--gray-1100) l c h / 20%)',
+        border: glassMaterialPrimitives.border,
       },
       false: {
         border: 'none',
@@ -29,4 +35,4 @@ const GlassMaterial = styled('div', {
   },
 });
 
-export { GlassMaterial };
+export { GlassMaterial, glassMaterialPrimitives };

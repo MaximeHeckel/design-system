@@ -1,6 +1,6 @@
 const darkTheme = {
   '.maximeheckel-dark': {
-    '--base-hue': '266',
+    '--base-hue': '262',
     '--white': 'oklch(100% 0 0)',
 
     '--gray-000': 'oklch(12.92% 0.005 var(--base-hue))',
@@ -25,6 +25,7 @@ const darkTheme = {
     '--blue-600': 'oklch(82% 0.082 var(--base-hue))',
     '--blue-700': 'oklch(73.65% 0.124 var(--base-hue))',
     '--blue-800': 'oklch(64.6% 0.172 var(--base-hue))',
+    // oklch(61.53% 0.1675 262.04)
     '--blue-900': 'oklch(55.52% 0.223 var(--base-hue))',
     '--blue-1000': 'oklch(46.51% 0.225 var(--base-hue))',
     '--blue-1100': 'oklch(36.42% 0.168 var(--base-hue))',
@@ -82,11 +83,11 @@ const darkTheme = {
     '--pink-1100': 'oklch(42.39% 0.195 352)',
     '--pink-1200': 'oklch(30.21% 0.138 352)',
 
-    '--accent': 'var(--blue-800)',
+    '--accent': 'oklch(61.53% 0.1675 262.04)',
     '--background': 'var(--gray-100)',
     '--header': 'oklch(from var(--gray-100) l c h / 40%)',
     '--emphasis': 'oklch(from var(--blue-800) l c h / 7%)',
-    '--hyperlink': '#5a9dff',
+    '--hyperlink': 'oklch(61.53% 0.1675 262.04)',
 
     '--foreground': 'var(--gray-300)',
     '--danger': 'var(--red-1000)',
@@ -101,7 +102,7 @@ const darkTheme = {
     '--text-tertiary': 'var(--gray-1000)',
     '--border-color': 'var(--gray-400)',
     '--card-background': 'var(--gray-300)',
-    '--input-active': 'var(--blue-800)',
+    '--input-active': 'oklch(61.53% 0.1675 262.04)',
     '--input-background': 'var(--gray-000)',
     '--input-disabled': 'var(--gray-700)',
     '--input-border': 'var(--gray-600)',

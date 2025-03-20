@@ -2,7 +2,7 @@
 export { default as Anchor } from './components/Anchor';
 export { default as Blockquote } from './components/Blockquote';
 export { default as Box } from './components/Box';
-export { default as Button } from './components/Button';
+export { default as Button, IconButton } from './components/Button';
 export { default as Callout } from './components/Callout';
 export { default as Card } from './components/Card';
 export { default as Checkbox } from './components/Checkbox';

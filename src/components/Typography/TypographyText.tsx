@@ -108,12 +108,6 @@ const Text = styled('span', {
         fontWeight: 'var(--font-weight-600)',
       },
     },
-    gradient: {
-      true: {
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-      },
-    },
   },
   defaultVariants: {
     family: 'default',
