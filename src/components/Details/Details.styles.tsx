@@ -42,7 +42,7 @@ export const CollapsibleRoot = styled(CollapsiblePrimitive.Root, {
 });
 
 export const StyledSummary = styled('summary', {
-  padding: 'var(--space-5) var(--space-4)',
+  padding: 'var(--space-4) var(--space-4)',
   cursor: 'pointer',
   position: 'relative',
   outline: 'none',
@@ -61,11 +61,11 @@ export const StyledSummary = styled('summary', {
     position: 'absolute',
     left: 0,
     width: 2,
-    height: 'var(--space-6)',
+    height: 'var(--space-5)',
     background: 'var(--accent)',
     content: '',
     display: 'inline-block',
-    borderRadius: 'var(--border-radius-2)',
+    borderRadius: 'var(--border-radius-3)',
     opacity: 'var(--indicator-opacity, 1)',
     transition: 'opacity 400ms ease-in-out',
     boxShadow: 'var(--indicator-shadow, none)',

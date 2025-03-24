@@ -63,7 +63,7 @@ export const StyledButton = styled('button', {
     },
     variant: {
       primary: {
-        '--button-background': '#4a80e8',
+        '--button-background': 'var(--accent)',
         '--color': 'var(--white)',
         '--shadow':
           'inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1.5px 2px rgba(0, 0, 0, 0.3)',
@@ -87,7 +87,7 @@ export const StyledButton = styled('button', {
       },
       secondary: {
         '--button-background': 'transparent',
-        '--color': '#4a80e8',
+        '--color': 'var(--accent)',
 
         '&:hover': {
           '&:not(:disabled)': {},
@@ -156,37 +156,19 @@ export const StyledIconButton = styled('button', {
   flexShrink: '0',
   outline: 'none',
   cursor: 'pointer',
-  border: '0',
   opacity: 'var(--opacity, 1)',
-  /* Constant properties */
-  background: 'transparent',
-  transition: 'color 0.3s ease, transform 0.3s ease',
-  borderRadius: 'var(--border-radius-1)',
+
+  background: 'var(--button-background, var(--foreground))',
   color: 'var(--color, var(--text-tertiary))',
   transform: 'scale(var(--button-content-scale, 1)) translateZ(0)',
   '--shadow-hover-primary': '0 2px 40px -4px var(--input-focus)',
+  borderRadius: 'var(--corner, var(--border-radius-1))',
+  boxShadow: 'var(--shadow, none)',
+  border:
+    'var(--border-thickness, 1px) solid var(--border-color, oklch(from var(--border-color) l c h / 60%))',
 
-  '&::after': {
-    zIndex: '0',
-    position: 'absolute',
-    content: "''",
-    display: 'block',
-    width: '100%',
-    height: '100%',
-    borderRadius: 'var(--corner, var(--border-radius-1))',
-    transition:
-      'box-shadow 0.3s ease, border-color 0.2s, background 0.3s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-    background: 'var(--button-background, var(--foreground))',
-    transform: 'scale(var(--button-background-scale, 1)) translateZ(0)',
-    border:
-      'var(--border-thickness, 1px) solid var(--border-color, oklch(from var(--border-color) l c h / 60%))',
-    boxShadow: 'var(--shadow, none)',
-
-    '@supports not (color: rgb(from white r g b))': {
-      border:
-        'var(--border-thickness, 1px) solid var(--border-color, var(--border-color))',
-    },
-  },
+  transition:
+    'box-shadow 0.3s ease, border 0.2s, border-color 0.2s, color 0.3s ease, background 0.3s ease, transform 0.2s',
 
   '&:disabled': {
     cursor: 'not-allowed',
@@ -196,6 +178,14 @@ export const StyledIconButton = styled('button', {
     filter: 'grayscale(0.25)',
   },
 
+  '&:hover': {
+    '--button-content-scale': '1.1',
+  },
+
+  '&:focus-visible': {
+    '--button-content-scale': '1.1',
+  },
+
   '&:active': {
     '--button-content-scale': '0.95',
   },
@@ -203,7 +193,7 @@ export const StyledIconButton = styled('button', {
   variants: {
     variant: {
       primary: {
-        '--button-background': '#4a80e8',
+        '--button-background': 'var(--accent)',
         '--border-color': 'transparent',
         '--border-thickness': '0px',
         '--color': 'var(--text-primary)',
@@ -223,25 +213,19 @@ export const StyledIconButton = styled('button', {
         },
       },
       secondary: {
-        '--button-background': 'transparent',
+        '--button-background': glassMaterialPrimitives['background-color'],
+        border: glassMaterialPrimitives['border'],
+        '--color': 'var(--text-secondary)',
 
         '&:hover': {
           '&:not(:disabled)': {
-            '--border-color': 'var(--accent)',
-            '--border-thickness': '2px',
-            '--color': 'var(--accent)',
-            '--corner': 'calc(var(--border-radius-1) + 2px)',
-            '--button-background-scale': '0.92',
+            '--color': 'var(--text-primary)',
             '--shadow': 'var(--shadow-hover-primary)',
           },
         },
 
         '&:focus-visible': {
-          '--border-color': 'var(--accent)',
-          '--border-thickness': '2px',
-          '--color': 'var(--accent)',
-          '--corner': 'calc(var(--border-radius-1) + 2px)',
-          '--button-background-scale': 0.92,
+          '--color': 'var(--text-primary)',
           '--shadow': 'var(--shadow-hover-primary)',
         },
       },

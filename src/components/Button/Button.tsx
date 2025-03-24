@@ -1,7 +1,7 @@
 import React from 'react';
 import Flex from '../Flex';
 import { StyledButton, StyledIconButton } from './Button.styles';
-import { ButtonProps, IconButtonProps } from './Button.types';
+import { ButtonProps } from './Button.types';
 
 const Button = React.forwardRef(
   <T extends object>(
@@ -21,7 +21,7 @@ const Button = React.forwardRef(
     // TODO: Deprecate variant "icon" in favor of IconButton component
     if (variant === 'icon') {
       return (
-        <StyledIconButton variant="secondary" ref={ref} {...rest}>
+        <StyledIconButton variant="tertiary" ref={ref} {...rest}>
           <Flex
             css={{
               zIndex: 1,

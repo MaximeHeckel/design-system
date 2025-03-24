@@ -1,22 +1,18 @@
 import { Shadows, styled } from 'src/lib/stitches.config';
 import Box from '../Box';
+import { glassMaterialPrimitives } from '../GlassMaterial';
 
 export const CardWrapper = styled(Box, {
   position: 'relative',
-  background: 'var(--card-background, var(--card-background))',
+  background: 'var(--card-bg, var(--card-background))',
   backdropFilter: 'var(--card-blur, none)',
   borderRadius: 'var(--border-radius-2)',
   boxShadow: 'var(--card-shadow)',
-  border: '1px solid var(--border-color)',
   overflow: 'hidden',
+  '--border': '1px solid var(--border-color)',
+  border: 'var(--border)',
 
   variants: {
-    glass: {
-      true: {
-        '--card-background': 'var(--foreground)',
-        '--card-blur': 'blur(6px)',
-      },
-    },
     depth: {
       0: {
         '--card-shadow': Shadows[0],
@@ -31,6 +27,18 @@ export const CardWrapper = styled(Box, {
         '--card-shadow': Shadows[3],
       },
     },
+    variant: {
+      primary: {
+        '--card-bg': 'var(--card-background)',
+      },
+      secondary: {
+        '--card-bg': glassMaterialPrimitives['background-color'],
+        '--border': glassMaterialPrimitives.border,
+      },
+      tertiary: {
+        '--card-bg': 'transparent',
+      },
+    },
   },
   defaultVariants: {
     depth: 1,
@@ -43,28 +51,27 @@ export const CardHeader = styled('div', {
   alignItems: 'center',
   borderTopLeftRadius: 'var(--border-radius-1)',
   borderTopRightRadius: 'var(--border-radius-1)',
-  minHeight: 'var(--space-8)',
-  padding: '0px 24px',
+  padding: '12px 12px',
   color: 'var(--text-tertiary)',
   fontWeight: 500,
   fontSize: 'var(--font-size-1)',
-  borderBottom: '1px solid var(--border-color)',
+  borderBottom: 'var(--border)',
 });
 
 CardHeader.displayName = 'CardHeader';
 
 export const CardBody = styled('div', {
   overflow: 'hidden',
-  padding: '24px 24px',
+  padding: '16px 16px',
   position: 'relative',
 
   variants: {
     dotMatrix: {
       true: {
         backgroundImage:
-          'radial-gradient(var(--border-color) 1px, transparent 0)',
-        backgroundPosition: '50% center',
-        backgroundSize: '20px 20px',
+          'radial-gradient(oklch( from var(--border-color) l c h / 54%) 1px, transparent 0)',
+        backgroundPosition: 'center center',
+        backgroundSize: '12px 12px',
       },
     },
   },

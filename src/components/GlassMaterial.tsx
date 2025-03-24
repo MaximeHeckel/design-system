@@ -4,7 +4,7 @@ const glassMaterialPrimitives = {
   'background-color': 'oklch(from var(--gray-900) l c h / var(--opacity, 0.3))',
   'backdrop-filter': 'blur(var(--blur, 12px)) saturate(var(--saturate, 1.15))',
   border:
-    'var(--thickness, 1px) solid oklch(from var(--gray-1100) l c h / 20%)',
+    'var(--thickness, 1px) solid oklch(from var(--gray-1100) l c h / 15%)',
 };
 
 const GlassMaterial = styled('div', {

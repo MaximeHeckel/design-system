@@ -38,7 +38,8 @@ export const StyledTextArea = styled('textarea', {
   '&:disabled': {
     '--background': 'var(--input-disabled)',
     cursor: 'not-allowed',
-    opacity: 0.65,
+    opacity: 0.4,
+    filter: 'grayscale(0.25)',
     '& + label': {
       cursor: 'not-allowed',
     },

@@ -53,7 +53,8 @@ export const StyledRadio = styled('input', {
   '&:disabled': {
     '--background': 'var(--input-disabled)',
     cursor: 'not-allowed',
-    opacity: 0.65,
+    opacity: 0.4,
+    filter: 'grayscale(0.25)',
     '&:checked': {
       '--border-color': 'var(--input-border)',
     },
