@@ -22,7 +22,7 @@ interface ArrowAnchorProps extends BaseAnchor {
 
 interface ExternalAnchorProps extends BaseAnchor {
   arrow?: never;
-  underline?: never;
+  underline?: boolean;
   /** This prop makes the Anchor component render an external link icon */
   external?: boolean;
   favicon?: never;

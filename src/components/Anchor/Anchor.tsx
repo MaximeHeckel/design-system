@@ -2,7 +2,6 @@ import React from 'react';
 import { StyledAnchor } from './Anchor.styles';
 import { AnchorProps } from './Anchor.types';
 import { getIconString } from './utils';
-import Icon from '../Icon/Icon';
 
 const Anchor = React.forwardRef(
   (props: AnchorProps, ref: React.Ref<HTMLAnchorElement>) => {
