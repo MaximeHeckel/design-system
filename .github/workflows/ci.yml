@@ -24,32 +24,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '18.16.0'
       - uses: pnpm/action-setup@v2
         with:
           version: 8
       - name: Cache pnpm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dependencies
         with:
           path: node_modules
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-
-      - name: Cache Cypress binary
-        id: cache-cypress-binary
-        uses: actions/cache@v2
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-binary-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            cypress-binary-
       - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true' || steps.cache-cypress-binary.outputs.cache-hit != 'true'
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           pnpm install
   lint-format:
@@ -57,16 +49,16 @@ jobs:
     needs: install-cache
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '18.16.0'
       - uses: pnpm/action-setup@v2
         with:
           version: 8
       - name: Restore pnpm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dependencies
         with:
           path: node_modules
@@ -84,16 +76,16 @@ jobs:
     needs: install-cache
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '18.16.0'
       - uses: pnpm/action-setup@v2
         with:
           version: 8
       - name: Restore pnpm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dependencies
         with:
           path: node_modules
@@ -108,16 +100,16 @@ jobs:
     needs: install-cache
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '18.16.0'
       - uses: pnpm/action-setup@v2
         with:
           version: 8
       - name: Restore pnpm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dependencies
         with:
           path: node_modules
@@ -132,16 +124,16 @@ jobs:
     needs: [lint-format, type-check, unit-test]
     steps:
       - name: Checkout Commit
-        uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v1
+        uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '18.16.0'
       - uses: pnpm/action-setup@v2
         with:
           version: 8
       - name: Restore pnpm dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache-dependencies
         with:
           path: node_modules
@@ -152,8 +144,9 @@ jobs:
         run: |
           pnpm build
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build-output
           path: dist
+          include-hidden-files: true
           retention-days: 1
