@@ -4,6 +4,7 @@ import Flex from '../Flex';
 import Icon from '../Icon';
 import { StyledSummary } from './Details.styles';
 import { SummaryProps } from './Details.types';
+import { glassMaterialPrimitives } from '../GlassMaterial';
 
 const Summary = (props: SummaryProps) => {
   const { children } = props;
@@ -22,15 +23,14 @@ const Summary = (props: SummaryProps) => {
           css={{
             position: 'absolute',
             right: 'var(--space-4)',
-            top: 22,
+            padding: 'var(--space-1)',
+            top: 'var(--space-4)',
             borderRadius: '50%',
-            background: 'var(--emphasis)',
-            width: 'var(--space-6)',
-            height: 'var(--space-6)',
+            background: glassMaterialPrimitives['background-color'],
           }}
           justifyContent="center"
         >
-          <Icon.X size="5" variant="info" />
+          <Icon.X size="3" variant="tertiary" />
         </Flex>
       </StyledSummary>
     </CollapsibleTrigger>

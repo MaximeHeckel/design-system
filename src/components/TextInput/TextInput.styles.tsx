@@ -9,7 +9,7 @@ export const StyledInput = styled('input', {
   position: 'relative',
   display: 'block',
   margin: 0,
-  padding: 'var(--input-inner-padding, 5px 40px 5px 16px)',
+  padding: 'var(--input-inner-padding, 4px 40px 4px 12px)',
 
   fontSize: 'var(--font-size-1)',
   fontFamily: 'inherit',
@@ -34,7 +34,8 @@ export const StyledInput = styled('input', {
   '&:disabled': {
     '--background': 'var(--input-disabled)',
     cursor: 'not-allowed',
-    opacity: 0.65,
+    opacity: 0.4,
+    filter: 'grayscale(0.25)',
     '& + label': {
       cursor: 'not-allowed',
     },
@@ -43,7 +44,7 @@ export const StyledInput = styled('input', {
   variants: {
     variant: {
       email: {
-        '--input-inner-padding': '5px 16px 5px 40px',
+        '--input-inner-padding': '4px 12px 4px 40px',
       },
       password: {},
       search: {},

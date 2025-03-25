@@ -67,6 +67,9 @@ export const StyledRange = styled('input', {
   },
 
   '&:disabled': {
+    opacity: 0.4,
+    filter: 'grayscale(0.25)',
+
     '&::-moz-range-thumb': {
       cursor: 'not-allowed',
     },

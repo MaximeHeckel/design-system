@@ -1,22 +1,24 @@
-export type MainButtonVariant = 'primary' | 'secondary';
-export type IconButtonVariant = 'icon';
+export type MainButtonVariant = 'primary' | 'secondary' | 'icon';
+export type IconButtonVariant = 'primary' | 'secondary' | 'tertiary';
 
 interface BaseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   type?: 'button' | 'reset' | 'submit';
+  children: React.ReactNode;
 }
 
-interface MainButtonProps extends BaseButtonProps {
+export interface MainButtonProps extends BaseButtonProps {
   variant: MainButtonVariant;
   icon?: never;
+  rounded?: boolean;
   startIcon?: React.ReactNode;
   endIcon?: React.ReactNode;
 }
 
-interface IconButtonProps extends BaseButtonProps {
+export interface MainIconButtonProps extends BaseButtonProps {
   variant: IconButtonVariant;
-  icon: React.ReactNode;
   startIcon?: never;
   endIcon?: never;
 }
 
-export type ButtonProps<T> = (MainButtonProps | IconButtonProps) & T;
+export type ButtonProps<T> = MainButtonProps & T;
+export type IconButtonProps<T> = MainIconButtonProps & T;

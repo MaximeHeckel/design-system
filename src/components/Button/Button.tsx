@@ -17,9 +17,11 @@ const Button = React.forwardRef(
       ...rest
     } = props;
 
+    // Fallback to previous implementation of icon button if variant is "icon"
+    // TODO: Deprecate variant "icon" in favor of IconButton component
     if (variant === 'icon') {
       return (
-        <StyledIconButton variant={variant} ref={ref} {...rest}>
+        <StyledIconButton variant="tertiary" ref={ref} {...rest}>
           <Flex
             css={{
               zIndex: 1,
@@ -32,11 +34,16 @@ const Button = React.forwardRef(
     }
 
     return (
-      <StyledButton variant={variant} ref={ref} {...rest}>
+      <StyledButton
+        hasIcon={startIcon ? 'startIcon' : endIcon ? 'endIcon' : 'none'}
+        variant={variant}
+        ref={ref}
+        {...rest}
+      >
         {startIcon ? (
           <Flex
             css={{
-              marginRight: 'var(--space-2)',
+              marginRight: 'var(--space-1)',
             }}
           >
             {startIcon}
@@ -46,7 +53,7 @@ const Button = React.forwardRef(
         {endIcon ? (
           <Flex
             css={{
-              marginLeft: 'var(--space-2)',
+              marginLeft: 'var(--space-1)',
             }}
           >
             {endIcon}

@@ -14,12 +14,18 @@ const Callout = (props: CalloutProps) => {
   return (
     <StyledCallout variant={variant} {...rest}>
       {icon ? (
-        <StyledCalloutIconWrapper variant={variant}>
+        <StyledCalloutIconWrapper
+          data-testid={`callout-icon-${variant}`}
+          variant={variant}
+        >
           {icon}
         </StyledCalloutIconWrapper>
       ) : null}
       {label ? (
-        <StyledCalloutLabelWrapper variant={variant}>
+        <StyledCalloutLabelWrapper
+          data-testid={`callout-label-${variant}`}
+          variant={variant}
+        >
           {label}
         </StyledCalloutLabelWrapper>
       ) : null}

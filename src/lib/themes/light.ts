@@ -86,6 +86,8 @@ const lightTheme = {
     '--background': 'var(--gray-100)',
     '--header': 'oklch(from var(--gray-100) l c h / 40%)',
     '--emphasis': 'oklch(from var(--blue-900) l c h / 5%)',
+    '--hyperlink': '#2480ed',
+
     '--foreground': 'oklch( from var(--gray-200) l c h / 100%)',
     '--danger': 'var(--red-900)',
     '--danger-emphasis': 'oklch(from var(--red-700) l c h / 10%)',

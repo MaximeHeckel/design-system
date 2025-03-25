@@ -2,13 +2,22 @@ import React from 'react';
 import { StyledAnchor } from './Anchor.styles';
 import { AnchorProps } from './Anchor.types';
 import { getIconString } from './utils';
+import Icon from '../Icon/Icon';
 
 const Anchor = React.forwardRef(
   (props: AnchorProps, ref: React.Ref<HTMLAnchorElement>) => {
-    const { children, href, arrow, underline, favicon, discreet, ...rest } =
-      props;
+    const {
+      children,
+      href,
+      arrow,
+      underline,
+      favicon,
+      discreet,
+      external,
+      ...rest
+    } = props;
 
-    const icon = getIconString(href, arrow);
+    const icon = href && getIconString(href, { arrow, external, favicon });
 
     return (
       <StyledAnchor
@@ -20,6 +29,7 @@ const Anchor = React.forwardRef(
         favicon={favicon}
         href={href}
         underline={underline}
+        external={external}
         ref={ref}
         {...rest}
       >

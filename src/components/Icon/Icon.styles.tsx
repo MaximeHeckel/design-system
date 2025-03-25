@@ -40,20 +40,20 @@ export const StyledSVG = styled('svg', {
     },
     size: {
       1: {
-        width: 'var(--space-1)',
-        height: 'var(--space-1)',
-      },
-      2: {
         width: 'var(--space-2)',
         height: 'var(--space-2)',
       },
-      3: {
+      2: {
         width: 'var(--space-3)',
         height: 'var(--space-3)',
       },
-      4: {
+      3: {
         width: 'var(--space-4)',
         height: 'var(--space-4)',
+      },
+      4: {
+        width: 20,
+        height: 20,
       },
       5: {
         width: 'var(--space-5)',

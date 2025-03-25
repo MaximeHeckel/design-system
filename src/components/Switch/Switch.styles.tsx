@@ -7,7 +7,6 @@ export const StyledSwitch = styled('input', {
   flexShrink: 0,
 
   height: '24px',
-  // TODO: Switch to 48px?
   width: '44px',
 
   outline: 'none',
@@ -16,8 +15,7 @@ export const StyledSwitch = styled('input', {
   margin: 0,
   cursor: 'pointer',
 
-  // TODO: Switch to token
-  borderRadius: '11px',
+  borderRadius: 'var(--border-radius-2)',
   border: '1px solid var(--border-color, var(--input-border))',
   background: 'var(--background, var(--input-background))',
   boxShadow: 'var(--shadow, none)',
@@ -35,7 +33,7 @@ export const StyledSwitch = styled('input', {
     width: '18px',
     height: '18px',
     background: 'var(--ab, var(--input-border))',
-
+    boxShadow: 'var(--shadow-handle, none)',
     transition:
       'transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), box-shadow 0.2s',
     transform: 'translateX(var(--x, 0))',
@@ -49,12 +47,15 @@ export const StyledSwitch = styled('input', {
     '--d-t-e': 'cubic-bezier(0.2, 0.85, 0.32, 1.2)',
     '--ab': '#ffffff',
     '--x': '20px',
+    '--shadow-handle':
+      'inset 0px 1px 1px rgba(255, 255, 255, 0.3), inset 0px -1.0px 0.5px rgba(0, 0, 0, 0.3)',
   },
 
   '&:disabled': {
     '--background': 'var(--input-disabled)',
     cursor: 'not-allowed',
-    opacity: '0.65',
+    opacity: '0.4',
+    filter: 'grayscale(0.25)',
     '&:checked': {
       '--border-color': 'var(--input-border)',
     },

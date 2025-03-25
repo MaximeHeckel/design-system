@@ -4,7 +4,7 @@ import Text from './TypographyText';
 
 export type TextSizeVariants = Pick<
   VariantProps<typeof Text>,
-  'size' | 'variant' | 'gradient'
+  'size' | 'variant'
 >;
 
 export type EMProps = React.HTMLAttributes<HTMLParagraphElement> &
