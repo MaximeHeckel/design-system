@@ -8,7 +8,7 @@ import Summary from './DetailsSummary';
 import { isElementOfTypeSummary } from './utils';
 
 const Details = (props: DetailsProps) => {
-  const { children } = props;
+  const { children, onOpenChange } = props;
   const [open, setOpen] = React.useState(false);
   const detailsRef = React.useRef<HTMLDetailsElement>(null);
   const contentRef = React.useRef<HTMLDivElement>(null);
@@ -50,7 +50,7 @@ const Details = (props: DetailsProps) => {
   }, []);
 
   return (
-    <CollapsibleRoot asChild open={open}>
+    <CollapsibleRoot asChild open={open} onOpenChange={onOpenChange}>
       <Card css={{ width: '100%' }} data-card-details>
         <details ref={detailsRef}>
           {SummaryComponent}

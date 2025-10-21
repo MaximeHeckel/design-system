@@ -8,4 +8,5 @@ export interface ContentProps {
 
 export interface DetailsProps {
   children: React.ReactNode;
+  onOpenChange?: (open: boolean) => void;
 }

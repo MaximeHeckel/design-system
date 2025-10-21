@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 /**
  * Returns true if the element is of type P, returns false otherwise
  * @param {any} element
@@ -5,11 +7,18 @@
  * @returns {boolean}
  */
 export function isElementOfType<P = {}>(
-  element: unknown,
+  element: ReactNode,
   ComponentType: React.ComponentType<P>
 ): element is React.ReactElement<P> {
   const reactElement = element as React.ReactElement;
 
-  // @ts-ignore ts complains about displayName not existing on `type`
-  return reactElement?.type?.displayName === ComponentType.displayName;
+  if (typeof reactElement?.type === 'string') {
+    return false;
+  }
+
+  if ('displayName' in reactElement?.type) {
+    return reactElement?.type?.displayName === ComponentType.displayName;
+  }
+
+  return false;
 }
