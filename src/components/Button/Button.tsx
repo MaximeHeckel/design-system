@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import Flex from '../Flex';
 import { StyledButton, StyledIconButton } from './Button.styles';
 import { ButtonProps } from './Button.types';
