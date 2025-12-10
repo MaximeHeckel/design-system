@@ -6,6 +6,7 @@ import { getIconString } from './utils';
 const Anchor = React.forwardRef(
   (props: AnchorProps, ref: React.Ref<HTMLAnchorElement>) => {
     const {
+      as: Component = 'a',
       children,
       href,
       arrow,
@@ -20,6 +21,7 @@ const Anchor = React.forwardRef(
 
     return (
       <StyledAnchor
+        as={Component}
         arrow={arrow}
         css={{
           '--icon': `url(${icon})`,
