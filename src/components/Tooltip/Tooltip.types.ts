@@ -1,12 +1,12 @@
-import { PopperContentProps } from '@radix-ui/react-tooltip';
+const SIDE_OPTIONS = ['top', 'right', 'bottom', 'left'] as const;
 
 export interface TooltipProps {
   children: React.ReactNode;
   content: string | React.ReactNode;
   id?: string;
   delayDuration?: number;
-  side?: PopperContentProps['side'];
-  sideOffset?: PopperContentProps['sideOffset'];
+  side?: (typeof SIDE_OPTIONS)[number];
+  sideOffset?: number;
   portalled?: boolean;
   visuallyHiddenText?: string;
 }
