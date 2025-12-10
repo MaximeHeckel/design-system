@@ -1,10 +1,11 @@
 import { render } from '@testing-library/react';
 import React from 'react';
+import { vi } from 'vitest';
 import Radio from '.';
 
 // eslint-disable-next-line no-console
 const originalWarn = console.warn;
-let consoleOutput = [];
+let consoleOutput: string[] = [];
 
 afterEach(() => {
   consoleOutput = [];
@@ -13,7 +14,15 @@ afterEach(() => {
 });
 
 describe('Radio', () => {
-  const mockedWarn = (output) => consoleOutput.push(output);
+  const mockedWarn = (output: string) => {
+    // Filter out React act deprecation warnings
+    if (
+      typeof output === 'string' &&
+      !output.includes('ReactDOMTestUtils.act')
+    ) {
+      consoleOutput.push(output);
+    }
+  };
   // eslint-disable-next-line no-console
   beforeEach(() => (console.warn = mockedWarn));
 
@@ -29,7 +38,7 @@ describe('Radio', () => {
 
   it('logs a warning if a Radio.Item component is used outside of the scope of a Radio.Group', () => {
     const { getByRole } = render(
-      <Radio.Group name="test" onChange={jest.fn}>
+      <Radio.Group name="test" onChange={vi.fn()}>
         <Radio.Item id="test" value="test" aria-label="test" />
       </Radio.Group>
     );
@@ -40,7 +49,7 @@ describe('Radio', () => {
 
   it('only renders children of type Radio.Item', () => {
     const { getByRole, queryByTestId } = render(
-      <Radio.Group name="test" onChange={jest.fn}>
+      <Radio.Group name="test" onChange={vi.fn()}>
         <Radio.Item id="test" value="test" aria-label="test" />
         <div data-testid="random" />
       </Radio.Group>

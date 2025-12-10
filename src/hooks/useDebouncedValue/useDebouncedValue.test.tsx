@@ -1,13 +1,14 @@
 import { act, renderHook } from '@testing-library/react';
+import { vi, beforeAll, afterAll, describe, it, expect } from 'vitest';
 
 import useDebouncedValue from '../useDebouncedValue';
 
 beforeAll(() => {
-  jest.useFakeTimers();
+  vi.useFakeTimers();
 });
 
 afterAll(() => {
-  jest.clearAllTimers();
+  vi.clearAllTimers();
 });
 
 describe('useDebouncedValue', () => {
@@ -26,13 +27,13 @@ describe('useDebouncedValue', () => {
     expect(result.current).toBe('');
 
     act(() => {
-      jest.advanceTimersByTime(250);
+      vi.advanceTimersByTime(250);
     });
 
     expect(result.current).toBe('');
 
     act(() => {
-      jest.advanceTimersByTime(250);
+      vi.advanceTimersByTime(250);
     });
 
     expect(result.current).toBe('Test');
