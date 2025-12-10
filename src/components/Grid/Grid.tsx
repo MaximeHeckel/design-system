@@ -3,10 +3,9 @@ import * as S from './Grid.styles';
 import { GridProps } from './Grid.types';
 import GridItem from './GridItem';
 
-interface GridComposition
-  extends React.ForwardRefExoticComponent<
-    GridProps & React.RefAttributes<HTMLDivElement>
-  > {
+interface GridComposition extends React.ForwardRefExoticComponent<
+  GridProps & React.RefAttributes<HTMLDivElement>
+> {
   Item: typeof GridItem;
 }
 

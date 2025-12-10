@@ -1,8 +1,7 @@
-export interface RangeProps
-  extends Omit<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    'onChange' | 'label' | 'as' | 'type'
-  > {
+export interface RangeProps extends Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'onChange' | 'label' | 'as' | 'type'
+> {
   id: string;
   label?: React.ReactNode;
   ['data-testid']?: string;

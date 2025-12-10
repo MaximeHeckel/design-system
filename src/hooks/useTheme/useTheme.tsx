@@ -33,8 +33,8 @@ const useDarkMode = (): [Theme, (theme?: Theme) => void] => {
       const nextState = themeValue
         ? themeValue
         : prevState === Theme.LIGHT
-        ? Theme.DARK
-        : Theme.LIGHT;
+          ? Theme.DARK
+          : Theme.LIGHT;
 
       document.documentElement.classList.remove('maximeheckel-' + prevState);
       document.documentElement.classList.add('maximeheckel-' + nextState);

@@ -16,8 +16,10 @@ export type RadioGroupProps = RadioContextType &
     children: React.ReactNode;
   };
 
-export interface RadioItemProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+export interface RadioItemProps extends Omit<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  'type'
+> {
   label?: React.ReactNode;
   id: string;
   ['aria-label']: string;
