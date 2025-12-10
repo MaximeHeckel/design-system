@@ -1,6 +1,7 @@
 export type ArrowPosition = 'left' | 'right';
 
 interface BaseAnchor extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  as?: React.ElementType;
   /** This prop makes the Anchor component color typography tertiary to blend more with corpus */
   discreet?: boolean;
 }
