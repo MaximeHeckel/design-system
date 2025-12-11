@@ -1,4 +1,4 @@
-const SIDE_OPTIONS = ['top', 'right', 'bottom', 'left'] as const;
+export const SIDE_OPTIONS = ['top', 'right', 'bottom', 'left'] as const;
 
 export interface TooltipProps {
   children: React.ReactNode;

@@ -1,4 +1,3 @@
-import { ForwardRefExoticComponent } from 'react';
 import { CSS, VariantProps } from 'src/lib/stitches.config';
 import * as S from './Grid.styles';
 

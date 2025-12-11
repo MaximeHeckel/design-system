@@ -6,7 +6,7 @@ import { ReactNode, isValidElement } from 'react';
  * @param {React.ComponentType<P>} ComponentType
  * @returns {boolean}
  */
-export function isElementOfType<P = {}>(
+export function isElementOfType<P = object>(
   element: ReactNode,
   ComponentType: React.ComponentType<P>
 ): element is React.ReactElement<P> {

@@ -53,7 +53,7 @@ describe('Card', () => {
   });
 
   it('renders a Card without a Card.Body', () => {
-    const { getByTestId, getByText, queryByText } = render(
+    const { getByTestId, getByText } = render(
       <Card data-testid="test-card">No Body!</Card>
     );
 

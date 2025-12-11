@@ -5,7 +5,7 @@ import { extractRegularKeys } from './utils';
 
 const useKeyboardShortcut = (
   shortcut: string,
-  callback: (e: KeyboardEvent) => any,
+  callback: (e: KeyboardEvent) => void,
   config?: Config
 ) => {
   const innerConfig = React.useMemo(
