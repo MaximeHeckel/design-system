@@ -1,4 +1,4 @@
-import { Shadows, styled } from 'src/lib/stitches.config';
+import { styled } from 'src/lib/stitches.config';
 
 export const StyledTextArea = styled('textarea', {
   WebkitAppearance: 'none',

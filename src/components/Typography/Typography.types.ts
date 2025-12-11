@@ -19,6 +19,6 @@ export type HeadingVariants = { size?: HeadingSizeVariants } & Omit<
 >;
 
 export type HeadingProps = React.ComponentProps<typeof DEFAULT_TAG> &
-  HeadingVariants & { css?: CSS; as?: any };
+  HeadingVariants & { css?: CSS; as?: React.ElementType };
 
 export type ShortHandHeadingProps = Omit<HeadingProps, 'size' | 'as'>;

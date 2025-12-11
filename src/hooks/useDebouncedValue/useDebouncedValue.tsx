@@ -1,5 +1,6 @@
 import React from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const useDebounce = (value: any, delay: number) => {
   // State and setters for debounced value
   const [debouncedValue, setDebouncedValue] = React.useState(value);
