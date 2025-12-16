@@ -31,7 +31,6 @@
     "@types/react": "^19.2.1",
     "@types/react-dom": "^19.2.1",
     "esbuild": "^0.27.1",
-    "esbuild-plugin-glob": "^2.2.3",
     "eslint": "^9.39.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",

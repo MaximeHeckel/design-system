@@ -15,24 +15,27 @@ const sharedConfig = {
   external: [...Object.keys(packagejson.peerDependencies || {})],
 };
 
-esbuild
-  .build({
+async function watch() {
+  const cjsContext = await esbuild.context({
     ...sharedConfig,
     entryPoints: ['src/index.ts'],
     outdir: 'dist/cjs',
     sourcemap: true,
     format: 'cjs',
-    watch: true,
-  })
-  .catch(() => process.exit(1));
+  });
 
-esbuild
-  .build({
+  const esmContext = await esbuild.context({
     ...sharedConfig,
     entryPoints: ['src/index.ts'],
     outdir: 'dist/esm',
     sourcemap: true,
     format: 'esm',
-    watch: true,
-  })
-  .catch(() => process.exit(1));
+  });
+
+  await Promise.all([cjsContext.watch(), esmContext.watch()]);
+
+  // eslint-disable-next-line no-console
+  console.log('Watching for changes...');
+}
+
+watch().catch(() => process.exit(1));

@@ -1,6 +1,5 @@
 const esbuild = require('esbuild');
 const packagejson = require('./package.json');
-const { globPlugin } = require('esbuild-plugin-glob');
 
 const sharedConfig = {
   loader: {
@@ -44,6 +43,5 @@ esbuild
     banner: {
       js: "import { createElement, Fragment } from 'react';\n",
     },
-    plugins: [globPlugin()],
   })
   .catch(() => process.exit(1));
