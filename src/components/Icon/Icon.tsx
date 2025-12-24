@@ -29,6 +29,8 @@ import {
   CoffeeIcon,
   AIChatIcon,
   CommandIcon,
+  ChevronUpDownIcon,
+  CheckIcon,
 } from './IconList';
 
 const Icon = () => {};
@@ -64,6 +66,8 @@ Icon.Copy = CopyIcon;
 Icon.Coffee = CoffeeIcon;
 Icon.Command = CommandIcon;
 Icon.AIChat = AIChatIcon;
+Icon.ChevronUpDown = ChevronUpDownIcon;
+Icon.Check = CheckIcon;
 Icon.displayName = 'Icon';
 
 export default Icon;
