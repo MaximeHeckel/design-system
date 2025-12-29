@@ -14,8 +14,8 @@ const sharedConfig = {
   logLevel: 'debug',
   external: [
     ...Object.keys(packagejson.peerDependencies || {}),
-    // '@base-ui/react',
-    // '@base-ui/react/*',
+    '@base-ui/react',
+    '@base-ui/react/*',
   ],
 };
 
