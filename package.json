@@ -50,8 +50,7 @@
     "react-dom": "^19.2.1"
   },
   "dependencies": {
-    "@radix-ui/react-collapsible": "^1.1.12",
-    "@radix-ui/react-tooltip": "^1.2.8",
+    "@base-ui/react": "^1.0.0",
     "@stitches/react": "^1.2.8"
   },
   "packageManager": "pnpm@9.12.3"
