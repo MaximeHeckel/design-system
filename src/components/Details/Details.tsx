@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { extractChildren } from 'src/lib/utils/extractChildren';
 import Card from '../Card';
-import { CollapsibleContent, CollapsibleRoot } from './Details.styles';
+import { CollapsiblePanel, CollapsibleRoot } from './Details.styles';
 import { DetailsProps } from './Details.types';
 import Content from './DetailsContent';
 import Summary from './DetailsSummary';
@@ -49,14 +49,24 @@ const Details = (props: DetailsProps) => {
     };
   }, []);
 
+  const handleOpenChange = (isOpen: boolean) => {
+    onOpenChange?.(isOpen);
+  };
+
   return (
-    <CollapsibleRoot asChild open={open} onOpenChange={onOpenChange}>
-      <Card css={{ width: '100%' }} data-card-details>
-        <details ref={detailsRef}>
-          {SummaryComponent}
-          <CollapsibleContent ref={contentRef}>{rest}</CollapsibleContent>
-        </details>
-      </Card>
+    <CollapsibleRoot
+      render={(renderProps) => (
+        <Card {...renderProps} css={{ width: '100%' }} data-card-details>
+          {renderProps.children}
+        </Card>
+      )}
+      open={open}
+      onOpenChange={handleOpenChange}
+    >
+      <details ref={detailsRef}>
+        {SummaryComponent}
+        <CollapsiblePanel ref={contentRef}>{rest}</CollapsiblePanel>
+      </details>
     </CollapsibleRoot>
   );
 };

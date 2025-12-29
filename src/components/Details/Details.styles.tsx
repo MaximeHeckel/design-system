@@ -1,11 +1,11 @@
-import * as CollapsiblePrimitive from '@radix-ui/react-collapsible';
+import { Collapsible } from '@base-ui/react/collapsible';
 import { keyframes, styled } from 'src/lib/stitches.config';
 import Box from '../Box';
 
 const open = keyframes({
   from: { height: 0, opacity: 0, transform: 'translateY(16px)' },
   to: {
-    height: 'var(--radix-collapsible-content-height)',
+    height: 'var(--collapsible-panel-height)',
     opacity: 1,
     transform: 'translateY(0px)',
   },
@@ -13,22 +13,22 @@ const open = keyframes({
 
 const close = keyframes({
   from: {
-    height: 'var(--radix-collapsible-content-height)',
+    height: 'var(--collapsible-panel-height)',
     opacity: 1,
     transform: 'translateY(0px)',
   },
   to: { height: 0, opacity: 0, transform: 'translateY(16px)' },
 });
 
-export const CollapsibleContent = styled(CollapsiblePrimitive.Content, {
+export const CollapsiblePanel = styled(Collapsible.Panel, {
   overflow: 'hidden',
-  '&[data-state="open"]': {
+  '&[data-open]': {
     animation: `${open} 300ms ease-out`,
     '@media screen and (prefers-reduced-motion: reduce)': {
       animation: 'none',
     },
   },
-  '&[data-state="closed"]': {
+  '&[data-closed]': {
     animation: `${close} 300ms ease-out`,
     '@media screen and (prefers-reduced-motion: reduce)': {
       animation: 'none',
@@ -36,8 +36,8 @@ export const CollapsibleContent = styled(CollapsiblePrimitive.Content, {
   },
 });
 
-export const CollapsibleTrigger = CollapsiblePrimitive.Trigger;
-export const CollapsibleRoot = styled(CollapsiblePrimitive.Root, {
+export const CollapsibleTrigger = Collapsible.Trigger;
+export const CollapsibleRoot = styled(Collapsible.Root, {
   position: 'relative',
 });
 
@@ -46,15 +46,15 @@ export const StyledSummary = styled('summary', {
   cursor: 'pointer',
   position: 'relative',
   outline: 'none',
+  listStyle: 'none',
 
   '&::marker': {
     display: 'none',
-    content: '',
+    content: '""',
   },
 
   '&::-webkit-details-marker': {
     display: 'none',
-    content: '',
   },
 
   '&:before': {
@@ -81,13 +81,13 @@ export const StyledSummary = styled('summary', {
     '--indicator-opacity': '1 !important',
   },
 
-  '&[data-state="open"]': {
+  '&[aria-expanded="true"]': {
     '--indicator-shadow': '0 0px 20px 6px var(--input-focus)',
     '--indicator-opacity': 1,
     '--rotation-icon': 'rotate(0deg)',
   },
 
-  '&[data-state="closed"]': {
+  '&[aria-expanded="false"]': {
     '--indicator-shadow': 'none',
     '--indicator-opacity': 0,
     '--rotation-icon': 'rotate(225deg)',

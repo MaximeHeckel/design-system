@@ -12,7 +12,11 @@ const sharedConfig = {
   jsxFragment: 'Fragment',
   target: ['esnext'],
   logLevel: 'debug',
-  external: [...Object.keys(packagejson.peerDependencies || {})],
+  external: [
+    ...Object.keys(packagejson.peerDependencies || {}),
+    // '@base-ui/react',
+    // '@base-ui/react/*',
+  ],
 };
 
 async function watch() {

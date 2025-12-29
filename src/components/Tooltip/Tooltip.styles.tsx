@@ -1,4 +1,3 @@
-import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import { keyframes, Shadows, styled } from 'src/lib/stitches.config';
 
 const slideUpAndFadeIn = keyframes({
@@ -27,7 +26,7 @@ const slideLeftAndFadeIn = keyframes({
   '100%': { opacity: 1, transform: 'translateX(0) scale(1)' },
 });
 
-export const TooltipContent = styled(TooltipPrimitive.Content, {
+export const TooltipPopupStyles = {
   color: 'var(--text-secondary)',
   background: 'var(--foreground)',
   border: '2px solid var(--border-color)',
@@ -45,11 +44,13 @@ export const TooltipContent = styled(TooltipPrimitive.Content, {
     animationDuration: '150ms',
     animationTimingFunction: 'ease-in-out',
     willChange: 'transform, opacity, scale',
-    '&[data-state="delayed-open"]': {
+    '&[data-open]': {
       '&[data-side="top"]': { animationName: slideDownAndFadeIn },
       '&[data-side="right"]': { animationName: slideLeftAndFadeIn },
       '&[data-side="bottom"]': { animationName: slideUpAndFadeIn },
       '&[data-side="left"]': { animationName: slideRightAndFadeIn },
     },
   },
-});
+} as const;
+
+export const StyledTooltipPopup = styled('div', TooltipPopupStyles);
